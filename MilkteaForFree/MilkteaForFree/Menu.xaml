@@ -112,10 +112,13 @@
                         <Button x:Name="AddDrinkButton" Content="Add Drink" FontSize="12" Width="150" Background="#1ABC9C" Foreground="White" Margin="0,20,0,0" Click="AddDrinkButton_Click"/>
                         <!-- Delete Milk Tea Button -->
                         <Button x:Name="DeleteDrinkButton" Content="Delete Drink" FontSize="12" Width="150" Background="#1ABC9C" Foreground="White" Margin="0,20,0,0" Click="DeleteDrinkButton_Click"/>
-                        <!-- Update Milk Tea Button -->
-                        <Button x:Name="UpdateDrinkButton" Content="Update Drink" FontSize="12" Width="150" Background="#1ABC9C" Foreground="White" Margin="0,20,0,0" Click="UpdateDrinkButton_Click"/>
-                        <!-- Save Milk Tea Button -->
-                        <Button x:Name="SaveDrinkButton" Content="Save Drink" FontSize="12" Width="150" Background="#1ABC9C" Foreground="White" Margin="0,20,0,0" Click="SaveDrinkButton_Click"/>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                            <!-- Update Milk Tea Button -->
+                            <Button x:Name="UpdateDrinkButton" Content="Update Drink" FontSize="12" Width="80" Background="#1ABC9C" Foreground="White" Margin="0,20,0,0"  Click="UpdateDrinkButton_Click"/>
+                            <!-- Save Milk Tea Button -->
+                            <Button x:Name="SaveDrinkButton" Content="Save Drink" FontSize="12" Width="60" Background="#1ABC9C" Foreground="White" Margin="10,20,0,0" Click="SaveDrinkButton_Click"/>
+                        </StackPanel>
+                        
 
 
                     </StackPanel>

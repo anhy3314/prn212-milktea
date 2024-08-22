@@ -3349,11 +3349,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\FPT\\SU24\\3W_PRN212\\Project_05\\prn212-milktea\\MilkteaForFree\\MilkteaForFree\\MilkteaForFree.csproj",
+      "projectUniqueName": "D:\\FPT\\SU24\\3W_PRN212\\Project_005\\prn212-milktea\\MilkteaForFree\\MilkteaForFree\\MilkteaForFree.csproj",
       "projectName": "MilkteaForFree",
-      "projectPath": "D:\\FPT\\SU24\\3W_PRN212\\Project_05\\prn212-milktea\\MilkteaForFree\\MilkteaForFree\\MilkteaForFree.csproj",
+      "projectPath": "D:\\FPT\\SU24\\3W_PRN212\\Project_005\\prn212-milktea\\MilkteaForFree\\MilkteaForFree\\MilkteaForFree.csproj",
       "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-      "outputPath": "D:\\FPT\\SU24\\3W_PRN212\\Project_05\\prn212-milktea\\MilkteaForFree\\MilkteaForFree\\obj\\",
+      "outputPath": "D:\\FPT\\SU24\\3W_PRN212\\Project_005\\prn212-milktea\\MilkteaForFree\\MilkteaForFree\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3370,8 +3370,8 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "projectReferences": {
-            "D:\\FPT\\SU24\\3W_PRN212\\Project_05\\prn212-milktea\\MilkteaForFree\\MilkteaForFree.BLL\\MilkteaForFree.BLL.csproj": {
-              "projectPath": "D:\\FPT\\SU24\\3W_PRN212\\Project_05\\prn212-milktea\\MilkteaForFree\\MilkteaForFree.BLL\\MilkteaForFree.BLL.csproj"
+            "D:\\FPT\\SU24\\3W_PRN212\\Project_005\\prn212-milktea\\MilkteaForFree\\MilkteaForFree.BLL\\MilkteaForFree.BLL.csproj": {
+              "projectPath": "D:\\FPT\\SU24\\3W_PRN212\\Project_005\\prn212-milktea\\MilkteaForFree\\MilkteaForFree.BLL\\MilkteaForFree.BLL.csproj"
             }
           }
         }

@@ -4416,11 +4416,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\FPT\\SU24\\3W_PRN212\\Project_05\\prn212-milktea\\MilkteaForFree\\MilkteaForFree.DAL\\MilkteaForFree.DAL.csproj",
+      "projectUniqueName": "D:\\FPT\\SU24\\3W_PRN212\\Project_005\\prn212-milktea\\MilkteaForFree\\MilkteaForFree.DAL\\MilkteaForFree.DAL.csproj",
       "projectName": "MilkteaForFree.DAL",
-      "projectPath": "D:\\FPT\\SU24\\3W_PRN212\\Project_05\\prn212-milktea\\MilkteaForFree\\MilkteaForFree.DAL\\MilkteaForFree.DAL.csproj",
+      "projectPath": "D:\\FPT\\SU24\\3W_PRN212\\Project_005\\prn212-milktea\\MilkteaForFree\\MilkteaForFree.DAL\\MilkteaForFree.DAL.csproj",
       "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-      "outputPath": "D:\\FPT\\SU24\\3W_PRN212\\Project_05\\prn212-milktea\\MilkteaForFree\\MilkteaForFree.DAL\\obj\\",
+      "outputPath": "D:\\FPT\\SU24\\3W_PRN212\\Project_005\\prn212-milktea\\MilkteaForFree\\MilkteaForFree.DAL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",

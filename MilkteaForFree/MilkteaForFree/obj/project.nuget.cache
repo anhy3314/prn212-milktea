@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CvRQStTBgi4=",
+  "dgSpecHash": "8t5AIkCosXM=",
   "success": true,
-  "projectFilePath": "D:\\FPT\\SU24\\3W_PRN212\\Project_05\\prn212-milktea\\MilkteaForFree\\MilkteaForFree\\MilkteaForFree.csproj",
+  "projectFilePath": "D:\\FPT\\SU24\\3W_PRN212\\Project_005\\prn212-milktea\\MilkteaForFree\\MilkteaForFree\\MilkteaForFree.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ADMIN\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
