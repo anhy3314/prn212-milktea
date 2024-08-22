@@ -45,3 +45,19 @@ D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree.B
 D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree.BLL\obj\Debug\net8.0\refint\MilkteaForFree.BLL.dll
 D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree.BLL\obj\Debug\net8.0\MilkteaForFree.BLL.pdb
 D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree.BLL\obj\Debug\net8.0\ref\MilkteaForFree.BLL.dll
+C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree.BLL\bin\Debug\net8.0\MilkteaForFree.BLL.deps.json
+C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree.BLL\bin\Debug\net8.0\MilkteaForFree.BLL.dll
+C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree.BLL\bin\Debug\net8.0\MilkteaForFree.BLL.pdb
+C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree.BLL\bin\Debug\net8.0\MilkteaForFree.DAL.dll
+C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree.BLL\bin\Debug\net8.0\MilkteaForFree.DAL.pdb
+C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree.BLL\obj\Debug\net8.0\MilkteaForFree.BLL.csproj.AssemblyReference.cache
+C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree.BLL\obj\Debug\net8.0\MilkteaForFree.BLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree.BLL\obj\Debug\net8.0\MilkteaForFree.BLL.AssemblyInfoInputs.cache
+C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree.BLL\obj\Debug\net8.0\MilkteaForFree.BLL.AssemblyInfo.cs
+C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree.BLL\obj\Debug\net8.0\MilkteaForFree.BLL.csproj.CoreCompileInputs.cache
+C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree.BLL\obj\Debug\net8.0\MilkteaForFree.BLL.sourcelink.json
+C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree.BLL\obj\Debug\net8.0\MilkteaF.48BF4108.Up2Date
+C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree.BLL\obj\Debug\net8.0\MilkteaForFree.BLL.dll
+C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree.BLL\obj\Debug\net8.0\refint\MilkteaForFree.BLL.dll
+C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree.BLL\obj\Debug\net8.0\MilkteaForFree.BLL.pdb
+C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree.BLL\obj\Debug\net8.0\ref\MilkteaForFree.BLL.dll

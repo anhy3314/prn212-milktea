@@ -22,7 +22,7 @@ namespace MilkteaForFree
 
             if (acc != null)
             {
-                MessageBox.Show("Login successful!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+                //MessageBox.Show("Login successful!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
                 // Navigate to the next window, e.g., the Menu window
                 Menu m = new();
                 m.Account = acc;

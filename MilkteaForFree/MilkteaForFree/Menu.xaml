@@ -146,7 +146,7 @@
 
 
             <!-- Tab for Order History -->
-            <TabItem Header="history">
+            <TabItem Header="History">
                 <StackPanel Margin="20">
                     <!-- Title for Order History -->
                     <TextBlock Text="Order History" FontSize="24" FontWeight="Bold" Margin="0,0,0,20"/>
@@ -155,34 +155,54 @@
                     <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
                         <!-- From Date Picker -->
                         <TextBlock Text="From:" FontSize="16" VerticalAlignment="Center"/>
-                        <DatePicker Name="FromDatePicker" FontSize="16" Margin="10,0,20,0"/>
+                        <DatePicker Name="FromDatePicker" FontSize="16" Margin="10,0,20,0" SelectedDateChanged="FromDatePicker_SelectedDateChanged" />
 
                         <!-- To Date Picker -->
                         <TextBlock Text="To:" FontSize="16" VerticalAlignment="Center"/>
-                        <DatePicker Name="ToDatePicker" FontSize="16" Margin="10,0,20,0"/>
+                        <DatePicker Name="ToDatePicker" FontSize="16" Margin="10,0,20,0" SelectedDateChanged="ToDatePicker_SelectedDateChanged"/>
 
                         <!-- Search Button -->
                         <Button Content="Search" FontSize="16" Width="100" Background="#1ABC9C" Foreground="White" Click="SearchOrdersButton_Click"/>
                     </StackPanel>
 
-                    <!-- List of Orders -->
-                    <ListView Name="OrderHistoryListView" Height="300">
-                        <ListView.ItemTemplate>
-                            <DataTemplate>
-                                <StackPanel Orientation="Vertical" Margin="10">
-                                    <!-- Order ID -->
-                                    <TextBlock Text="{Binding OrderID}" FontSize="16" FontWeight="Bold" Foreground="#4B3832"/>
-                                    <!-- Order Date -->
-                                    <TextBlock Text="{Binding OrderDate, StringFormat='{}{0:MM/dd/yyyy HH:mm}'}" FontSize="14" Foreground="#4B3832"/>
-                                    <!-- Summary of Items -->
-                                    <TextBlock Text="{Binding ItemsSummary}" FontSize="14" Foreground="#4B3832"/>
-                                    <!-- Total Amount -->
-                                    <TextBlock Text="{Binding TotalAmount, StringFormat='Total: {0:C}'}" FontSize="14" Foreground="#4B3832"/>
-                                    <Separator Margin="0,10,0,10"/>
-                                </StackPanel>
-                            </DataTemplate>
-                        </ListView.ItemTemplate>
-                    </ListView>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,0" Background="Black" HorizontalAlignment="Center">
+                        <!-- List of Orders -->
+                        <ListView Name="OrderHistoryListView" Height="500" Width="1000" Background="Snow" Grid.Column="0" SelectionChanged="OrderHistoryListView_SelectionChanged">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Vertical">
+                                        <!-- Order ID -->
+                                        <TextBlock Text="{Binding OrderId}" FontSize="16" FontWeight="Bold" Foreground="#4B3832"/>
+                                        <!-- Order Date -->
+                                        <TextBlock Text="{Binding OrderDate, StringFormat='{}{0:MM/dd/yyyy HH:mm}'}" FontSize="14" Foreground="#4B3832"/>
+                                        <!-- Summary of Items -->
+                                        <TextBlock Text="{Binding ItemsSummary}" FontSize="14" Foreground="#4B3832"/>
+                                        <!-- Total Amount -->
+                                        <TextBlock Text="{Binding Total, StringFormat= Total: 0 VND, ConverterCulture=nl-VN}" FontSize="14" Foreground="#4B3832"/>
+                                        <Separator Margin="0,10,0,10"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+
+                        <ListView Name="OrderDetailListView" Height="500" Width="500" Margin="50,0,0,0" Background="Snow"  Grid.Column="1">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Vertical" Margin="10">
+                                        <!-- DrinkName -->
+                                        <TextBlock Text="{Binding DrinkName}" FontSize="16" FontWeight="Bold" Foreground="#4B3832"/>
+                                        <!-- Quantity -->
+                                        <TextBlock Text="{Binding Quantity, StringFormat= Quantity: 0}" FontSize="14" Foreground="#4B3832"/>
+                                        <!-- UnitPrice -->
+                                        <TextBlock Text="{Binding UnitPrice, StringFormat=Unit price: 0 VND, ConverterCulture=nl-VN}" FontSize="14" Foreground="#4B3832"/>
+                                        <!-- Discount -->
+                                        <TextBlock Text="{Binding Discount, StringFormat= Discount: 0}" FontSize="14" Foreground="#4B3832"/>
+                                        <Separator Margin="0,10,0,10"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </StackPanel>
                 </StackPanel>
             </TabItem>
 

@@ -1,4 +1,5 @@
-﻿using MilkteaForFree.BLL.Services;
+﻿using MilkteaForFree.BLL.Response;
+using MilkteaForFree.BLL.Services;
 using MilkteaForFree.DAL.Entities;
 using MilkteaForFree.DAL.Repositories;
 using System;
@@ -36,14 +37,23 @@ namespace MilkteaForFree
         public ObservableCollection<Order> OrderHistory { get; set; }
         public ObservableCollection<OrderDetail> OrderDetails { get; set; } = new ObservableCollection<OrderDetail>();
 
+        private List<MilkteaForFree.DAL.Entities.Order> orders;
+
         public Menu()
         {
             InitializeComponent();
             DataContext = this;
 
+            InitializeOrderHistory();
+
             Drinks = new ObservableCollection<Drink>();
             OrderHistory = new ObservableCollection<Order>();
             OrderDetails = new ObservableCollection<OrderDetail>();
+
+            FromDatePicker.SelectedDate = DateTime.Now;
+            ToDatePicker.SelectedDate = DateTime.Now;
+            FromDatePicker.DisplayDateEnd = ToDatePicker.DisplayDate;
+            ToDatePicker.DisplayDateEnd = DateTime.Now;
         }
 
         public void FillDrinkDataGrid()
@@ -209,27 +219,30 @@ namespace MilkteaForFree
 
         private void SearchOrdersButton_Click(object sender, RoutedEventArgs e)
         {
-            //var fromDate = FromDatePicker.SelectedDate;
-            //var toDate = ToDatePicker.SelectedDate;
+            var fromDate = FromDatePicker.SelectedDate;
+            var toDate = ToDatePicker.SelectedDate;
 
-            //if (fromDate == null || toDate == null)
-            //{
-            //    MessageBox.Show("Please select both start and end dates.", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
-            //    return;
-            //}
+            OrderDetailListView.SelectedIndex = 0;
+            OrderDetailListView.ItemsSource = null;
 
-            //// Ensure the end date is not earlier than the start date
-            //if (toDate < fromDate)
-            //{
-            //    MessageBox.Show("End date cannot be earlier than start date.", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
-            //    return;
-            //}
+            if (fromDate == null || toDate == null)
+            {
+                MessageBox.Show("Please select both start and end dates.", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
 
-            //// Filter orders by the selected date range
-            //var filteredOrders = OrderHistory.Where(o => o.OrderDate >= fromDate && o.OrderDate <= toDate).ToList();
+            // Ensure the end date is not earlier than the start date
+            if (toDate < fromDate)
+            {
+                MessageBox.Show("End date cannot be earlier than start date.", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
 
-            //// Update the ListView to display the filtered orders
-            //OrderHistoryListView.ItemsSource = filteredOrders;
+            // Filter orders by the selected date range
+            var filteredOrders = orders.Where(o => o.OrderDate >= fromDate && o.OrderDate <= toDate).ToList();
+
+            // Update the ListView to display the filtered orders
+            OrderHistoryListView.ItemsSource = filteredOrders;
         }
 
         private void OrderTab_Loaded(object sender, RoutedEventArgs e)
@@ -416,6 +429,85 @@ namespace MilkteaForFree
 
             drinkService.UpdateDrink(x);
             FillDrinkManagementDataGrid();
+        }
+
+        private void InitializeOrderHistory()
+        {
+            OrderService orderService = new OrderService();
+            orders = orderService.GetList().ToList();
+            //MessageBox.Show("" + orders.Count, "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+            for (int i = 0; i < orders.Count; i++)
+            {
+                MilkteaForFree.DAL.Entities.Order item = orders[i];
+                Order order = new Order
+                {
+                    OrderId = item.OrderId,
+                    OrderDate = item.OrderDate,
+                    Total = item.Total,
+                    UserId = 1,
+                };
+                //OrderHistory.Add(order);
+
+            }
+            OrderHistoryListView.ItemsSource = orders;
+        }
+
+        private void FromDatePicker_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ToDatePicker.DisplayDateStart = FromDatePicker.SelectedDate;
+        }
+
+        private void ToDatePicker_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
+        {
+            FromDatePicker.DisplayDateEnd = ToDatePicker.SelectedDate;
+        }
+
+        public class OrderDetailView()
+        {
+            public string DrinkName { get; set; }
+            public double Discount { get; set; }
+            public decimal? UnitPrice { get; set; }
+            public int Quantity { get; set; }
+        }
+
+        private void OrderHistoryListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            MilkteaForFree.DAL.Entities.Order item = (MilkteaForFree.DAL.Entities.Order)OrderHistoryListView.SelectedItem;
+            //MessageBox.Show("" + item.OrderId, "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+            List<OrderDetailView> listOrderDetailViews = new List<OrderDetailView>();
+
+            OrderService orderService = new OrderService();
+            try
+            {
+                if (OrderHistoryListView.SelectedItem == null)
+                {
+                    OrderDetailListView.SelectedIndex = 0;
+                    OrderDetailListView.Items.Clear();
+                    return;
+                }
+
+
+                List<OrderDetailResponse> listItems = orderService.GetOrderDetailsByOrderId(item.OrderId).ToList();
+
+                foreach (OrderDetailResponse od in listItems)
+                {
+                    listOrderDetailViews.Add(new OrderDetailView
+                    {
+                        DrinkName = od.Drink.DrinkName,
+                        Discount = od.Discount,
+                        Quantity = od.Quantity,
+                        UnitPrice = od.UnitPrice
+                    });
+                }
+            }
+            catch (Exception ex)
+            {
+                return;
+            }
+
+
+
+            OrderDetailListView.ItemsSource = listOrderDetailViews;
         }
     }
 }

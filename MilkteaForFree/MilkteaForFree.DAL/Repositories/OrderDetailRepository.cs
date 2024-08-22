@@ -93,5 +93,14 @@ namespace MilkteaForFree.DAL.Repositories
             _context = new();
             return _context.OrderDetails.Where(x => x.OrderId == currOrderId && x.DrinkId == drinkId).FirstOrDefault();
         }
+
+        public List<OrderDetail> GetListOrderDetailByOrderId(int id)
+        {
+            using (var context = new MilkTeaContext())
+            {
+                return context.OrderDetails.Where(od => od.OrderId.Equals(id))
+                    .Include(od => od.Drink).ToList();
+            }
+        }
     }
 }

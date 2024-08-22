@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\FPT\\SU24\\3W_PRN212\\Project_004\\prn212-milktea\\MilkteaForFree\\MilkteaForFree.BLL\\MilkteaForFree.BLL.csproj": {}
+    "C:\\Project\\New folder\\prn212-milktea\\MilkteaForFree\\MilkteaForFree.BLL\\MilkteaForFree.BLL.csproj": {}
   },
   "projects": {
-    "D:\\FPT\\SU24\\3W_PRN212\\Project_004\\prn212-milktea\\MilkteaForFree\\MilkteaForFree.BLL\\MilkteaForFree.BLL.csproj": {
+    "C:\\Project\\New folder\\prn212-milktea\\MilkteaForFree\\MilkteaForFree.BLL\\MilkteaForFree.BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FPT\\SU24\\3W_PRN212\\Project_004\\prn212-milktea\\MilkteaForFree\\MilkteaForFree.BLL\\MilkteaForFree.BLL.csproj",
+        "projectUniqueName": "C:\\Project\\New folder\\prn212-milktea\\MilkteaForFree\\MilkteaForFree.BLL\\MilkteaForFree.BLL.csproj",
         "projectName": "MilkteaForFree.BLL",
-        "projectPath": "D:\\FPT\\SU24\\3W_PRN212\\Project_004\\prn212-milktea\\MilkteaForFree\\MilkteaForFree.BLL\\MilkteaForFree.BLL.csproj",
-        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "D:\\FPT\\SU24\\3W_PRN212\\Project_004\\prn212-milktea\\MilkteaForFree\\MilkteaForFree.BLL\\obj\\",
+        "projectPath": "C:\\Project\\New folder\\prn212-milktea\\MilkteaForFree\\MilkteaForFree.BLL\\MilkteaForFree.BLL.csproj",
+        "packagesPath": "C:\\Users\\nhatt\\.nuget\\packages\\",
+        "outputPath": "C:\\Project\\New folder\\prn212-milktea\\MilkteaForFree\\MilkteaForFree.BLL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nhatt\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\FPT\\SU24\\3W_PRN212\\Project_004\\prn212-milktea\\MilkteaForFree\\MilkteaForFree.DAL\\MilkteaForFree.DAL.csproj": {
-                "projectPath": "D:\\FPT\\SU24\\3W_PRN212\\Project_004\\prn212-milktea\\MilkteaForFree\\MilkteaForFree.DAL\\MilkteaForFree.DAL.csproj"
+              "C:\\Project\\New folder\\prn212-milktea\\MilkteaForFree\\MilkteaForFree.DAL\\MilkteaForFree.DAL.csproj": {
+                "projectPath": "C:\\Project\\New folder\\prn212-milktea\\MilkteaForFree\\MilkteaForFree.DAL\\MilkteaForFree.DAL.csproj"
               }
             }
           }
@@ -48,6 +48,16 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -64,21 +74,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.304/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\FPT\\SU24\\3W_PRN212\\Project_004\\prn212-milktea\\MilkteaForFree\\MilkteaForFree.DAL\\MilkteaForFree.DAL.csproj": {
+    "C:\\Project\\New folder\\prn212-milktea\\MilkteaForFree\\MilkteaForFree.DAL\\MilkteaForFree.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FPT\\SU24\\3W_PRN212\\Project_004\\prn212-milktea\\MilkteaForFree\\MilkteaForFree.DAL\\MilkteaForFree.DAL.csproj",
+        "projectUniqueName": "C:\\Project\\New folder\\prn212-milktea\\MilkteaForFree\\MilkteaForFree.DAL\\MilkteaForFree.DAL.csproj",
         "projectName": "MilkteaForFree.DAL",
-        "projectPath": "D:\\FPT\\SU24\\3W_PRN212\\Project_004\\prn212-milktea\\MilkteaForFree\\MilkteaForFree.DAL\\MilkteaForFree.DAL.csproj",
-        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "D:\\FPT\\SU24\\3W_PRN212\\Project_004\\prn212-milktea\\MilkteaForFree\\MilkteaForFree.DAL\\obj\\",
+        "projectPath": "C:\\Project\\New folder\\prn212-milktea\\MilkteaForFree\\MilkteaForFree.DAL\\MilkteaForFree.DAL.csproj",
+        "packagesPath": "C:\\Users\\nhatt\\.nuget\\packages\\",
+        "outputPath": "C:\\Project\\New folder\\prn212-milktea\\MilkteaForFree\\MilkteaForFree.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nhatt\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -154,7 +164,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.304/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
