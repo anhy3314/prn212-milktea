@@ -61,3 +61,19 @@ C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree.BLL\obj\Debug
 C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree.BLL\obj\Debug\net8.0\refint\MilkteaForFree.BLL.dll
 C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree.BLL\obj\Debug\net8.0\MilkteaForFree.BLL.pdb
 C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree.BLL\obj\Debug\net8.0\ref\MilkteaForFree.BLL.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree.BLL\bin\Debug\net8.0\MilkteaForFree.BLL.deps.json
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree.BLL\bin\Debug\net8.0\MilkteaForFree.BLL.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree.BLL\bin\Debug\net8.0\MilkteaForFree.BLL.pdb
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree.BLL\bin\Debug\net8.0\MilkteaForFree.DAL.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree.BLL\bin\Debug\net8.0\MilkteaForFree.DAL.pdb
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree.BLL\obj\Debug\net8.0\MilkteaForFree.BLL.csproj.AssemblyReference.cache
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree.BLL\obj\Debug\net8.0\MilkteaForFree.BLL.GeneratedMSBuildEditorConfig.editorconfig
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree.BLL\obj\Debug\net8.0\MilkteaForFree.BLL.AssemblyInfoInputs.cache
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree.BLL\obj\Debug\net8.0\MilkteaForFree.BLL.AssemblyInfo.cs
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree.BLL\obj\Debug\net8.0\MilkteaForFree.BLL.csproj.CoreCompileInputs.cache
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree.BLL\obj\Debug\net8.0\MilkteaForFree.BLL.sourcelink.json
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree.BLL\obj\Debug\net8.0\MilkteaF.48BF4108.Up2Date
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree.BLL\obj\Debug\net8.0\MilkteaForFree.BLL.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree.BLL\obj\Debug\net8.0\refint\MilkteaForFree.BLL.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree.BLL\obj\Debug\net8.0\MilkteaForFree.BLL.pdb
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree.BLL\obj\Debug\net8.0\ref\MilkteaForFree.BLL.dll

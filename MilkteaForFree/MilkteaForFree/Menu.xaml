@@ -110,12 +110,12 @@
 
                         <!-- Add Milk Tea Button -->
                         <Button x:Name="AddDrinkButton" Content="Add Drink" FontSize="12" Width="150" Background="#1ABC9C" Foreground="White" Margin="0,20,0,0" Click="AddDrinkButton_Click"/>
+                        <!-- Delete Milk Tea Button -->
+                        <Button x:Name="DeleteDrinkButton" Content="Delete Drink" FontSize="12" Width="150" Background="#1ABC9C" Foreground="White" Margin="0,20,0,0" Click="DeleteDrinkButton_Click"/>
                         <!-- Update Milk Tea Button -->
                         <Button x:Name="UpdateDrinkButton" Content="Update Drink" FontSize="12" Width="150" Background="#1ABC9C" Foreground="White" Margin="0,20,0,0" Click="UpdateDrinkButton_Click"/>
-                        <!-- Delete Milk Tea Button -->
-                        <Button Content="Delete Drink" FontSize="12" Width="150" Background="#1ABC9C" Foreground="White" Margin="0,20,0,0"/>
-                        <!-- Delete Milk Tea Button -->
-                        <Button Content="Quit" FontSize="12" Width="150" Background="#1ABC9C" Foreground="White" Margin="0,20,0,0"/>
+                        <!-- Save Milk Tea Button -->
+                        <Button x:Name="SaveDrinkButton" Content="Save Drink" FontSize="12" Width="150" Background="#1ABC9C" Foreground="White" Margin="0,20,0,0" Click="SaveDrinkButton_Click"/>
 
 
                     </StackPanel>
@@ -126,7 +126,7 @@
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,0,0,10">
                             <TextBlock Text="Search by name:" FontSize="16" VerticalAlignment="Center" Margin="0,0,10,0"/>
                             <TextBox Name="MilkTeaSearchTextBox" Width="200" FontSize="16" Margin="0,0,10,0"/>
-                            <Button x:Name="SearchDrinkButton" Content="Search" Width="80" FontSize="16" Background="#1ABC9C" Foreground="White"/>
+                            <Button x:Name="SearchDrinkButton" Content="Search" Width="80" FontSize="16" Background="#1ABC9C" Foreground="White" Click="SearchDrinkButton_Click"/>
                         </StackPanel>
 
                         <!-- DataGrid to display milk tea items -->
@@ -146,7 +146,7 @@
 
 
             <!-- Tab for Order History -->
-            <TabItem Header="History">
+            <TabItem Header="History" Height="22" Margin="-2,0,-2,0" VerticalAlignment="Bottom">
                 <StackPanel Margin="20">
                     <!-- Title for Order History -->
                     <TextBlock Text="Order History" FontSize="24" FontWeight="Bold" Margin="0,0,0,20"/>
@@ -167,7 +167,7 @@
 
                     <StackPanel Orientation="Horizontal" Margin="0,0,0,0" Background="Black" HorizontalAlignment="Center">
                         <!-- List of Orders -->
-                        <ListView Name="OrderHistoryListView" Height="500" Width="1000" Background="Snow" Grid.Column="0" SelectionChanged="OrderHistoryListView_SelectionChanged">
+                        <ListView Name="OrderHistoryListView" Height="500" Width="600" Background="Snow" Grid.Column="0" SelectionChanged="OrderHistoryListView_SelectionChanged">
                             <ListView.ItemTemplate>
                                 <DataTemplate>
                                     <StackPanel Orientation="Vertical">
@@ -185,7 +185,7 @@
                             </ListView.ItemTemplate>
                         </ListView>
 
-                        <ListView Name="OrderDetailListView" Height="500" Width="500" Margin="50,0,0,0" Background="Snow"  Grid.Column="1">
+                        <ListView Name="OrderDetailListView" Height="500" Width="300" Margin="50,0,0,0" Background="Snow"  Grid.Column="1">
                             <ListView.ItemTemplate>
                                 <DataTemplate>
                                     <StackPanel Orientation="Vertical" Margin="10">
@@ -207,22 +207,22 @@
             </TabItem>
 
             <!-- Tab for Employee Profile -->
-            <TabItem Header="Employee">
+            <TabItem x:Name="ProfileTab" Header="My Profile" Loaded="ProfileTab_Loaded">
                 <StackPanel Margin="20">
                     <!-- Title for User Profile -->
                     <TextBlock Text="User Profile" FontSize="24" FontWeight="Bold" Margin="0,0,0,20"/>
 
                     <!-- Username -->
                     <TextBlock Text="Username:" FontSize="16"/>
-                    <TextBlock Name="UsernameTextBlock" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+                    <TextBox Name="UsernameTextBox" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
 
                     <!-- Phone -->
                     <TextBlock Text="Phone:" FontSize="16"/>
-                    <TextBlock Name="Phone" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+                    <TextBox Name="PhoneTextBox" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
 
                     <!-- Role -->
                     <TextBlock Text="Role:" FontSize="16"/>
-                    <TextBlock Name="RoleTextBlock" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+                    <TextBox Name="RoleTextBox" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
                 </StackPanel>
             </TabItem>
         </TabControl>

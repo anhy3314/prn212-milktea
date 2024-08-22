@@ -12,7 +12,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MilkteaForFree.DAL\MilkteaForFree.DAL.csproj" />
+    <ProjectReference Include="..\MilkteaForFree.DAL\MilkteaForFree.DAL.csproj">
+      <Private>True</Private>
+    </ProjectReference>
   </ItemGroup>
 
 </Project>

@@ -64,22 +64,21 @@ namespace MilkteaForFree.DAL.Repositories
             }
         }
 
-        public List<Order> GetOrders(DateTime from, DateTime to)
+        public List<Order> GetOrders(DateTime? from, DateTime? to)
         {
             _context = new();
             return _context.Orders
                     .Where(o => o.OrderDate >= from && o.OrderDate <= to)
-                    .Include(o => o.OrderDetails) // Include related OrderDetails
                     .ToList();
         }
 
-        public int CountOrderByDate(DateTime start, DateTime end)
+        public int CountOrderByDate(DateTime? start, DateTime? end)
         {
             _context = new();
             return _context.Orders.Where(x => x.OrderDate >= start && x.OrderDate <= end).Count();
         }
 
-        public decimal CountTotalByDate(DateTime start, DateTime end)
+        public decimal CountTotalByDate(DateTime? start, DateTime? end)
         {
             _context = new();
             decimal total = 0;

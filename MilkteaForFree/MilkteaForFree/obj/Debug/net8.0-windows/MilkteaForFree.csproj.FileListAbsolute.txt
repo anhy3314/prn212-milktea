@@ -1,248 +1,84 @@
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\MilkteaForFree.exe
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\appsettings.json
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\MilkteaForFree.deps.json
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\MilkteaForFree.runtimeconfig.json
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\MilkteaForFree.dll
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\MilkteaForFree.pdb
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Azure.Core.dll
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Azure.Identity.dll
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Data.SqlClient.dll
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.dll
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.SqlServer.dll
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Extensions.Caching.Memory.dll
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.dll
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.FileExtensions.dll
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Json.dll
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.dll
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.dll
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Extensions.Options.dll
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Extensions.Primitives.dll
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Identity.Client.dll
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Identity.Client.NativeInterop.dll
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Abstractions.dll
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Logging.dll
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Protocols.dll
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Tokens.dll
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.SqlServer.Server.dll
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Web.WebView2.Core.dll
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Web.WebView2.WinForms.dll
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Web.WebView2.Wpf.dll
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\System.IdentityModel.Tokens.Jwt.dll
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\System.Memory.Data.dll
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\System.Runtime.Caching.dll
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\runtimes\win-arm64\native\msalruntime_arm64.dll
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\runtimes\win-x64\native\msalruntime.dll
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\runtimes\win-x86\native\msalruntime_x86.dll
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\runtimes\win-arm64\native\WebView2Loader.dll
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\runtimes\win-x64\native\WebView2Loader.dll
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\runtimes\win-x86\native\WebView2Loader.dll
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\MilkteaForFree.BLL.dll
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\MilkteaForFree.DAL.dll
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\MilkteaForFree.BLL.pdb
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\MilkteaForFree.DAL.pdb
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\MilkteaForFree.csproj.AssemblyReference.cache
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\MainWindow.baml
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\MainWindow.g.cs
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\Menu.g.cs
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\App.g.cs
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\MilkteaForFree_MarkupCompile.cache
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\MilkteaForFree_MarkupCompile.lref
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\Menu.baml
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\MilkteaForFree.g.resources
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\MilkteaForFree.GeneratedMSBuildEditorConfig.editorconfig
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\MilkteaForFree.AssemblyInfoInputs.cache
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\MilkteaForFree.AssemblyInfo.cs
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\MilkteaForFree.csproj.CoreCompileInputs.cache
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\MilkteaForFree.sourcelink.json
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\MilkteaF.CD07E910.Up2Date
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\MilkteaForFree.dll
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\refint\MilkteaForFree.dll
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\MilkteaForFree.pdb
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\MilkteaForFree.genruntimeconfig.cache
-D:\FPT\SU24\3W_PRN212\Project_002\Lag\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\ref\MilkteaForFree.dll
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\MilkteaForFree.exe
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\appsettings.json
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\MilkteaForFree.deps.json
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\MilkteaForFree.runtimeconfig.json
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\MilkteaForFree.dll
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\MilkteaForFree.pdb
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Azure.Core.dll
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Azure.Identity.dll
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Data.SqlClient.dll
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.dll
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.SqlServer.dll
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Extensions.Caching.Memory.dll
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.dll
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.FileExtensions.dll
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Json.dll
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.dll
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.dll
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Extensions.Options.dll
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Extensions.Primitives.dll
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Identity.Client.dll
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Identity.Client.NativeInterop.dll
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Abstractions.dll
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Logging.dll
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Protocols.dll
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Tokens.dll
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.SqlServer.Server.dll
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Web.WebView2.Core.dll
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Web.WebView2.WinForms.dll
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Web.WebView2.Wpf.dll
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\System.IdentityModel.Tokens.Jwt.dll
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\System.Memory.Data.dll
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\System.Runtime.Caching.dll
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\runtimes\win-arm64\native\msalruntime_arm64.dll
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\runtimes\win-x64\native\msalruntime.dll
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\runtimes\win-x86\native\msalruntime_x86.dll
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\runtimes\win-arm64\native\WebView2Loader.dll
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\runtimes\win-x64\native\WebView2Loader.dll
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\runtimes\win-x86\native\WebView2Loader.dll
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\MilkteaForFree.BLL.dll
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\MilkteaForFree.DAL.dll
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\MilkteaForFree.BLL.pdb
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\MilkteaForFree.DAL.pdb
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\MilkteaForFree.csproj.AssemblyReference.cache
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\MainWindow.baml
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\MainWindow.g.cs
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\Menu.g.cs
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\App.g.cs
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\MilkteaForFree_MarkupCompile.cache
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\MilkteaForFree_MarkupCompile.lref
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\Menu.baml
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\MilkteaForFree.g.resources
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\MilkteaForFree.GeneratedMSBuildEditorConfig.editorconfig
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\MilkteaForFree.AssemblyInfoInputs.cache
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\MilkteaForFree.AssemblyInfo.cs
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\MilkteaForFree.csproj.CoreCompileInputs.cache
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\MilkteaForFree.sourcelink.json
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\MilkteaF.CD07E910.Up2Date
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\MilkteaForFree.dll
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\refint\MilkteaForFree.dll
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\MilkteaForFree.pdb
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\MilkteaForFree.genruntimeconfig.cache
-D:\FPT\SU24\3W_PRN212\Project_004\prn212-milktea\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\ref\MilkteaForFree.dll
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\MilkteaForFree.exe
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\appsettings.json
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\MilkteaForFree.deps.json
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\MilkteaForFree.runtimeconfig.json
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\MilkteaForFree.dll
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\MilkteaForFree.pdb
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Azure.Core.dll
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Azure.Identity.dll
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Data.SqlClient.dll
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.dll
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.SqlServer.dll
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Extensions.Caching.Memory.dll
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.dll
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.FileExtensions.dll
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Json.dll
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.dll
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.dll
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Extensions.Options.dll
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Extensions.Primitives.dll
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Identity.Client.dll
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Identity.Client.NativeInterop.dll
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Abstractions.dll
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Logging.dll
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Protocols.dll
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Tokens.dll
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.SqlServer.Server.dll
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Web.WebView2.Core.dll
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Web.WebView2.WinForms.dll
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Web.WebView2.Wpf.dll
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\System.IdentityModel.Tokens.Jwt.dll
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\System.Memory.Data.dll
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\System.Runtime.Caching.dll
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\runtimes\win-arm64\native\msalruntime_arm64.dll
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\runtimes\win-x64\native\msalruntime.dll
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\runtimes\win-x86\native\msalruntime_x86.dll
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\runtimes\win-arm64\native\WebView2Loader.dll
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\runtimes\win-x64\native\WebView2Loader.dll
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\runtimes\win-x86\native\WebView2Loader.dll
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\MilkteaForFree.BLL.dll
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\MilkteaForFree.DAL.dll
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\MilkteaForFree.BLL.pdb
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\MilkteaForFree.DAL.pdb
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\MilkteaForFree.csproj.AssemblyReference.cache
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\MainWindow.baml
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\MainWindow.g.cs
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\Menu.g.cs
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\App.g.cs
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\MilkteaForFree_MarkupCompile.cache
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\MilkteaForFree_MarkupCompile.lref
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\Menu.baml
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\MilkteaForFree.g.resources
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\MilkteaForFree.GeneratedMSBuildEditorConfig.editorconfig
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\MilkteaForFree.AssemblyInfoInputs.cache
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\MilkteaForFree.AssemblyInfo.cs
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\MilkteaForFree.csproj.CoreCompileInputs.cache
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\MilkteaForFree.sourcelink.json
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\MilkteaF.CD07E910.Up2Date
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\MilkteaForFree.dll
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\refint\MilkteaForFree.dll
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\MilkteaForFree.pdb
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\MilkteaForFree.genruntimeconfig.cache
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\ref\MilkteaForFree.dll
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\AutoMapper.dll
-C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\MilkteaForFree.exe
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\appsettings.json
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\MilkteaForFree.deps.json
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\MilkteaForFree.runtimeconfig.json
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\MilkteaForFree.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\MilkteaForFree.pdb
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\AutoMapper.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Azure.Core.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Azure.Identity.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Data.SqlClient.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Extensions.Caching.Memory.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.FileExtensions.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Json.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Extensions.Options.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Extensions.Primitives.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Identity.Client.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Identity.Client.NativeInterop.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Abstractions.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Logging.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Protocols.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Tokens.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.SqlServer.Server.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Web.WebView2.Core.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Web.WebView2.WinForms.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\Microsoft.Web.WebView2.Wpf.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\System.IdentityModel.Tokens.Jwt.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\System.Memory.Data.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\System.Runtime.Caching.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\runtimes\win-arm64\native\msalruntime_arm64.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\runtimes\win-x64\native\msalruntime.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\runtimes\win-x86\native\msalruntime_x86.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\runtimes\win-arm64\native\WebView2Loader.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\runtimes\win-x64\native\WebView2Loader.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\runtimes\win-x86\native\WebView2Loader.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\MilkteaForFree.BLL.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\MilkteaForFree.DAL.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\MilkteaForFree.BLL.pdb
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\bin\Debug\net8.0-windows\MilkteaForFree.DAL.pdb
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\MilkteaForFree.csproj.AssemblyReference.cache
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\MainWindow.baml
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\MainWindow.g.cs
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\Menu.g.cs
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\App.g.cs
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\MilkteaForFree_MarkupCompile.cache
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\MilkteaForFree_MarkupCompile.lref
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\Menu.baml
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\MilkteaForFree.g.resources
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\MilkteaForFree.GeneratedMSBuildEditorConfig.editorconfig
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\MilkteaForFree.AssemblyInfoInputs.cache
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\MilkteaForFree.AssemblyInfo.cs
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\MilkteaForFree.csproj.CoreCompileInputs.cache
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\MilkteaForFree.sourcelink.json
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\MilkteaF.CD07E910.Up2Date
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\MilkteaForFree.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\refint\MilkteaForFree.dll
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\MilkteaForFree.pdb
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\MilkteaForFree.genruntimeconfig.cache
+D:\FPT\SU24\3W_PRN212\Project_05\prn212-milktea\MilkteaForFree\MilkteaForFree\obj\Debug\net8.0-windows\ref\MilkteaForFree.dll

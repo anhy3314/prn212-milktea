@@ -1,4 +1,5 @@
-﻿using MilkteaForFree.BLL.Response;
+﻿using Microsoft.IdentityModel.Tokens;
+using MilkteaForFree.BLL.Response;
 using MilkteaForFree.BLL.Services;
 using MilkteaForFree.DAL.Entities;
 using MilkteaForFree.DAL.Repositories;
@@ -31,7 +32,7 @@ namespace MilkteaForFree
         private OrderDetailService detailService = new();
         private int tempOrderId = new();
         private bool payFlag = false;
-        public Drink EditedDrinks { get; set; }
+        public Drink EditedDrinks { get; set; } = null;
         public User Account { get; set; }
         public ObservableCollection<Drink> Drinks { get; set; }
         public ObservableCollection<Order> OrderHistory { get; set; }
@@ -100,36 +101,6 @@ namespace MilkteaForFree
             {
                 MessageBox.Show($"An error occurred while loading the drink menu: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-        }
-
-
-
-        private void AddMilkTeaButton_Click(object sender, RoutedEventArgs e)
-        {
-            //string name = MilkTeaNameTextBox.Text;
-            //if (decimal.TryParse(MilkTeaPriceTextBox.Text, out decimal price))
-            //{
-            //    string selectedType = (MilkTeaTypeComboBox.SelectedItem as ComboBoxItem)?.Content.ToString();
-
-            //    // Add the new milk tea to the list (implement logic to save this data as needed)
-            //    Drinks.Add(new Drink
-            //    {
-            //        DrinkId = Drinks.Count + 1, // Example ID assignment
-            //        CategoryID = 1, // Example category ID
-            //        Name = name,
-            //        UnitPrice = price,
-            //        DrinkStatus = 1 // Example status
-            //    });
-
-            //    MessageBox.Show("Milk Tea added successfully!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
-            //    MilkTeaNameTextBox.Clear();
-            //    MilkTeaPriceTextBox.Clear();
-            //    MilkTeaTypeComboBox.SelectedIndex = -1;
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Invalid price entered.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-            //}
         }
 
         private void AddToCart_Click(object sender, RoutedEventArgs e)
@@ -239,7 +210,8 @@ namespace MilkteaForFree
             }
 
             // Filter orders by the selected date range
-            var filteredOrders = orders.Where(o => o.OrderDate >= fromDate && o.OrderDate <= toDate).ToList();
+            //var filteredOrders = orders.Where(o => o.OrderDate >= fromDate && o.OrderDate <= toDate).ToList();
+            var filteredOrders = orderService.GetOrders(fromDate, toDate);
 
             // Update the ListView to display the filtered orders
             OrderHistoryListView.ItemsSource = filteredOrders;
@@ -346,10 +318,6 @@ namespace MilkteaForFree
             }
         }
 
-        public void CountId()
-        {
-            tempOrderId = orderService.CountOrderID() + 1;
-        }
 
         public void FillDrinkManagementDataGrid()
         {
@@ -368,6 +336,7 @@ namespace MilkteaForFree
         private void DrinkManagementTab_Loaded(object sender, RoutedEventArgs e)
         {
             FillAllInDrinkManagement();
+            SaveDrinkButton.IsEnabled = false;
         }
 
         public void FillAllInDrinkManagement()
@@ -377,26 +346,55 @@ namespace MilkteaForFree
             //FillElemetInDrinkManage();
         }
 
+        public bool CheckValid()
+        {
+            if (MilkTeaNameTextBox.Text.IsNullOrEmpty() || MilkTeaPriceTextBox.Text.IsNullOrEmpty() || MilkTeaTypeComboBox.SelectedValue == null)
+            {
+                MessageBox.Show("All Field are required", "Validation", MessageBoxButton.OK, MessageBoxImage.Error);
+                return false;
+            }
+
+            bool convertStatus = decimal.TryParse(MilkTeaPriceTextBox.Text, out decimal price);
+            if (convertStatus == false)
+            {
+                MessageBox.Show("Price must be a number", "Validation", MessageBoxButton.OK, MessageBoxImage.Error);
+                return false;
+            }
+
+            decimal maxLimit = 100000.00m;
+            decimal minLimit = 1.00m;
+            if(price < minLimit && price > maxLimit)
+            {
+                MessageBox.Show("Price is out of range", "Validation", MessageBoxButton.OK, MessageBoxImage.Error);
+                return false;
+            }
+
+            return true;
+        }
+
         private void AddDrinkButton_Click(object sender, RoutedEventArgs e)
         {
             MessageBoxResult answer = MessageBox.Show("Do you really want to add new drink?", "Confirm?", MessageBoxButton.YesNo, MessageBoxImage.Question);
 
             if (answer == MessageBoxResult.Yes)
             {
-
                 int tmpId = drinkService.CountDrink() + 1;
                 while (drinkService.GetById(tmpId) != null)
                 {
                     tmpId++;
                 }
-                Drink x = new();
-                x.DrinkId = tmpId;
-                x.DrinkName = MilkTeaNameTextBox.Text;
-                x.UnitPrice = decimal.Parse(MilkTeaPriceTextBox.Text);
-                x.CategoryId = (int)MilkTeaTypeComboBox.SelectedValue;
-                x.DrinkStatus = 1;
 
-                drinkService.AddDrink(x);
+                if(CheckValid())
+                {
+                    Drink x = new();
+                    x.DrinkId = tmpId;
+                    x.DrinkName = MilkTeaNameTextBox.Text;
+                    x.UnitPrice = decimal.Parse(MilkTeaPriceTextBox.Text);
+                    x.CategoryId = (int)MilkTeaTypeComboBox.SelectedValue;
+                    x.DrinkStatus = 1;
+
+                    drinkService.AddDrink(x);
+                }
             }
 
             FillDrinkManagementDataGrid();
@@ -404,31 +402,28 @@ namespace MilkteaForFree
 
         public void FillElemetInDrinkManage()
         {
-            Drink? selected = MilkTeaDataGrid.SelectedItem as Drink;
-            MilkTeaNameTextBox.Text = selected.DrinkName;
-            MilkTeaPriceTextBox.Text = selected.UnitPrice.ToString();
-            MilkTeaTypeComboBox.SelectedValue = selected.CategoryId;
+            MilkTeaNameTextBox.Text = EditedDrinks.DrinkName;
+            MilkTeaPriceTextBox.Text = EditedDrinks.UnitPrice.ToString();
+            MilkTeaTypeComboBox.SelectedValue = EditedDrinks.CategoryId;
         }
 
         private void UpdateDrinkButton_Click(object sender, RoutedEventArgs e)
         {
+            UpdateDrinkButton.IsEnabled = false;
+            SaveDrinkButton.IsEnabled = true;
+
             Drink? selected = MilkTeaDataGrid.SelectedItem as Drink;
             if (selected == null)
             {
-                MessageBox.Show("Please select a row (air con) before editing", "Select?", MessageBoxButton.OK, MessageBoxImage.Error);
+                UpdateDrinkButton.IsEnabled = true;
+                SaveDrinkButton.IsEnabled = false;
+                MessageBox.Show("Please select a row (drink) before editing", "Select?", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
             MessageBox.Show("You Select: " + selected.ToString());
+            EditedDrinks = selected;
 
-            Drink x = new();
-            x.DrinkId = selected.DrinkId;
-            x.DrinkName = MilkTeaNameTextBox.Text;
-            x.UnitPrice = decimal.Parse(MilkTeaPriceTextBox.Text);
-            x.CategoryId = (int)MilkTeaTypeComboBox.SelectedValue;
-            x.DrinkStatus = 1;
-
-            drinkService.UpdateDrink(x);
-            FillDrinkManagementDataGrid();
+            FillElemetInDrinkManage();
         }
 
         private void InitializeOrderHistory()
@@ -508,6 +503,69 @@ namespace MilkteaForFree
 
 
             OrderDetailListView.ItemsSource = listOrderDetailViews;
+        }
+
+        private void ProfileTab_Loaded(object sender, RoutedEventArgs e)
+        {
+            FillProfile();
+            UsernameTextBox.IsEnabled = false;
+            PhoneTextBox.IsEnabled = false;
+            RoleTextBox.IsEnabled = false;
+        }
+
+        public void FillProfile()
+        {
+            UsernameTextBox.Text = Account.UserName;
+            PhoneTextBox.Text = Account.UserPhone;
+            if (Account.UserRole == 1)
+                RoleTextBox.Text = "Admin";
+            else
+                RoleTextBox.Text = "Staff";
+        }
+
+        private void SearchDrinkButton_Click(object sender, RoutedEventArgs e)
+        {
+            var search = MilkTeaSearchTextBox.Text;
+
+            MilkTeaDataGrid.ItemsSource = null;
+            MilkTeaDataGrid.ItemsSource = drinkService.SearchDrinkByName(search);
+        }
+
+        private void SaveDrinkButton_Click(object sender, RoutedEventArgs e)
+        {
+            UpdateDrinkButton.IsEnabled = true;
+            SaveDrinkButton.IsEnabled = false;
+
+            Drink x = new();
+            x.DrinkId = EditedDrinks.DrinkId;
+            x.DrinkName = MilkTeaNameTextBox.Text;
+            x.UnitPrice = decimal.Parse(MilkTeaPriceTextBox.Text);
+            x.CategoryId = (int)MilkTeaTypeComboBox.SelectedValue;
+            x.DrinkStatus = 1;
+
+            drinkService.UpdateDrink(x);
+            FillDrinkManagementDataGrid();
+        }
+
+
+        private void DeleteDrinkButton_Click(object sender, RoutedEventArgs e)
+        {
+            Drink? selected = MilkTeaDataGrid.SelectedItem as Drink;
+            if (selected == null)
+            {
+                UpdateDrinkButton.IsEnabled = true;
+                SaveDrinkButton.IsEnabled = false;
+                MessageBox.Show("Please select a row (drink) before editing", "Select?", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            MessageBoxResult answer = MessageBox.Show("Do you really want to delete this drink", "Confirm?", MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+            if(answer == MessageBoxResult.No) return;
+
+            drinkService.DeleteDrink(selected);
+
+            FillAllInDrinkManagement();
         }
     }
 }

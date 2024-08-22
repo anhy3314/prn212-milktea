@@ -26,7 +26,9 @@ public class OrderService
     public void DeleteOrder(Order newOrder) => _repo.DeleteOrder(newOrder);
     public int CountOrderID() => _repo.CountOrderID();
     public void UpdateTotalPrice(int id, decimal x) => _repo.UpdateTotalPrice(id, x);
-    public List<Order> GetOrders(DateTime from, DateTime to) => _repo.GetOrders(from, to);
+    public List<Order> GetOrders(DateTime? from, DateTime? to) => _repo.GetOrders(from, to);
+    public int CountOrderByDate(DateTime? start, DateTime? end) => _repo.CountOrderByDate(start, end);
+    public decimal CountTotalByDate(DateTime? start, DateTime? end) => _repo.CountTotalByDate(start, end);
 
     public void AddOrder(Order order, List<OrderDetail> orderDetails)
     {
