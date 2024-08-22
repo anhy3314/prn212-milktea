@@ -11,7 +11,7 @@
     <Grid>
         <TabControl>
             <!-- Tab for Ordering -->
-            <TabItem Header="Order">
+            <TabItem x:Name="OrderTab" Header="Order" Loaded="OrderTab_Loaded">
                 <StackPanel Orientation="Vertical" Margin="20">
                     <!-- Title and Welcome Message -->
                     <TextBlock Text="Bubble Tea Shop" FontSize="36" FontWeight="Bold" Foreground="#F67280" HorizontalAlignment="Center"/>
@@ -32,13 +32,12 @@
                                 <DataTemplate>
                                     <StackPanel Orientation="Horizontal" Margin="10">
                                         <!-- Tea Name -->
-                                        <TextBlock Text="{Binding Name}" FontSize="18" FontWeight="Bold" Foreground="#4B3832" VerticalAlignment="Center"/>
+                                        <TextBlock Text="{Binding DrinkName}" FontSize="18" FontWeight="Bold" Foreground="#4B3832" VerticalAlignment="Center"/>
                                         <!-- Tea Price -->
-                                        <TextBlock Text="{Binding Price, StringFormat='{}{0:C}'}" FontSize="16" Foreground="#4B3832" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                                        <TextBlock Text="{Binding UnitPrice, StringFormat='{}{0:#,0 VNĐ}'}" FontSize="16" Foreground="#4B3832" VerticalAlignment="Center" Margin="10,0,0,0"/>
                                         <!-- Buttons for Tea Actions -->
-                                        <Button Content="Add to Cart" Width="100" Margin="20,0,0,0" Background="#1ABC9C" Foreground="White" Click="AddToCart_Click"/>
-                                        <Button Content="Delete From Cart" Width="100" Margin="20,0,0,0" Background="#1ABC9C" Foreground="White" Click="AddToCart_Click"/>
-                                        <Button Content="Delete From Menu" Width="100" Margin="20,0,0,0" Background="#1ABC9C" Foreground="White" Click="AddToCart_Click"/>
+                                        <Button x:Name="AddToCartButton" Content="Add to Cart" Width="100" Margin="20,0,0,0" Background="#1ABC9C" Foreground="White" Click="AddToCart_Click"/>
+                                        <!--<Button Content="Delete From Menu" Width="100" Margin="20,0,0,0" Background="#1ABC9C" Foreground="White" Click="AddToCart_Click"/>-->
                                     </StackPanel>
                                 </DataTemplate>
                             </ListView.ItemTemplate>
@@ -54,10 +53,12 @@
                                     <DataTemplate>
                                         <StackPanel Orientation="Horizontal" Margin="10">
                                             <!-- Cart Item Name -->
-                                            <TextBlock Text="{Binding Name}" FontSize="18" Foreground="#4B3832"/>
+                                            <TextBlock Text="{Binding Drink.DrinkName}" FontSize="18" Foreground="#4B3832"/>
                                             <!-- Quantity of Cart Item -->
                                             <TextBlock Text="x" FontSize="18" Foreground="#4B3832" Margin="10,0,0,0"/>
                                             <TextBlock Text="{Binding Quantity}" FontSize="18" Foreground="#4B3832" Margin="10,0,0,0"/>
+                                            <!-- Buttons for Cart Actions -->
+                                            <Button x:Name="DeleteFromCartButton" Content="Delete From Cart" Width="100" Margin="20,0,0,0" Background="#1ABC9C" Foreground="White" Click="DeleteFromCartButton_Click"/>
                                             <!-- Total Price for Cart Item -->
                                             <TextBlock Text="{Binding TotalPrice, StringFormat='{}{0:C}'}" FontSize="18" Foreground="#4B3832" Margin="10,0,0,0"/>
                                         </StackPanel>
@@ -69,42 +70,83 @@
                             <TextBlock Name="TotalTextBlock" Text="0.00" FontSize="18" Foreground="#4B3832" Margin="10,5,0,0"/>
                             <!-- Checkout Button -->
                             <Button Content="Proceed to Checkout" Width="200" Margin="20,20,0,0" Background="#F67280" Foreground="White" HorizontalAlignment="Center" Click="Checkout_Click"/>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
+                                <Button x:Name="CreateBillButton" Content="Create a Bill" Width="90" Margin="20,20,0,0" Background="#F67280" Foreground="White" Click="CreateBillButton_Click"/>
+                                <Button x:Name="CancelButton" Content="Cancel" Width="90" Margin="20,20,0,0" Background="#F67280" Foreground="White" Click="CancelButton_Click"/>
+                            </StackPanel>
                         </StackPanel>
                     </Grid>
                 </StackPanel>
             </TabItem>
 
             <!-- Tab for Adding New Milk Tea -->
-            <TabItem Header="Add booba">
-                <StackPanel Margin="20">
-                    <!-- Title for Adding Milk Tea -->
-                    <TextBlock Text="Add New Milk Tea" FontSize="24" FontWeight="Bold" Margin="0,0,0,20"/>
+            <TabItem x:Name="DrinkManagementTab" Header="Drink Management" Loaded="DrinkManagementTab_Loaded" Margin="-2,-2,-2,0" Height="20" VerticalAlignment="Top">
+                <Grid Margin="20">
+                    <!-- Define two columns: one for the form, the other for the DataGrid -->
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <!-- Left column (wider) -->
+                        <ColumnDefinition Width="3*"/>
+                        <!-- Right column (wider for DataGrid) -->
+                    </Grid.ColumnDefinitions>
 
-                    <!-- Milk Tea Name -->
-                    <TextBlock Text="Name:" FontSize="16"/>
-                    <TextBox Name="MilkTeaNameTextBox" FontSize="16" Margin="0,0,0,10"/>
+                    <!-- Left Side: StackPanel for form input -->
+                    <StackPanel Grid.Column="0" Margin="10">
+                        <!-- Title for Adding Milk Tea -->
+                        <TextBlock Text="Edit Drinks" FontSize="24" FontWeight="Bold" Margin="0,0,0,20"/>
 
-                    <!-- Milk Tea Price -->
-                    <TextBlock Text="Price:" FontSize="16"/>
-                    <TextBox Name="MilkTeaPriceTextBox" FontSize="16" Margin="0,0,0,10"/>
+                        <!-- Milk Tea Name -->
+                        <TextBlock Text="Name:" FontSize="16"/>
+                        <TextBox Name="MilkTeaNameTextBox" FontSize="16" Margin="0,0,0,10"/>
 
-                    <!-- Milk Tea Type Selection -->
-                    <TextBlock Text="Milk Tea Type:" FontSize="16"/>
-                    <ComboBox Name="MilkTeaTypeComboBox" FontSize="16" Margin="0,0,0,10">
-                        <ComboBoxItem Content="Classic"/>
-                        <ComboBoxItem Content="Fruit Tea"/>
-                        <ComboBoxItem Content="Matcha"/>
-                        <ComboBoxItem Content="Taro"/>
-                        <!-- Add more milk tea types as needed -->
-                    </ComboBox>
+                        <!-- Milk Tea Price -->
+                        <TextBlock Text="Price:" FontSize="16"/>
+                        <TextBox Name="MilkTeaPriceTextBox" FontSize="16" Margin="0,0,0,10"/>
 
-                    <!-- Add Milk Tea Button -->
-                    <Button Content="Add Milk Tea" FontSize="16" Width="150" Background="#1ABC9C" Foreground="White" Click="AddMilkTeaButton_Click" Margin="0,20,0,0"/>
-                </StackPanel>
+                        <!-- Milk Tea Type Selection -->
+                        <TextBlock Text="Category:" FontSize="16"/>
+                        <ComboBox Name="MilkTeaTypeComboBox" FontSize="16" Margin="0,0,0,10">
+                        </ComboBox>
+
+                        <!-- Add Milk Tea Button -->
+                        <Button x:Name="AddDrinkButton" Content="Add Drink" FontSize="12" Width="150" Background="#1ABC9C" Foreground="White" Margin="0,20,0,0" Click="AddDrinkButton_Click"/>
+                        <!-- Update Milk Tea Button -->
+                        <Button x:Name="UpdateDrinkButton" Content="Update Drink" FontSize="12" Width="150" Background="#1ABC9C" Foreground="White" Margin="0,20,0,0" Click="UpdateDrinkButton_Click"/>
+                        <!-- Delete Milk Tea Button -->
+                        <Button Content="Delete Drink" FontSize="12" Width="150" Background="#1ABC9C" Foreground="White" Margin="0,20,0,0"/>
+                        <!-- Delete Milk Tea Button -->
+                        <Button Content="Quit" FontSize="12" Width="150" Background="#1ABC9C" Foreground="White" Margin="0,20,0,0"/>
+
+
+                    </StackPanel>
+
+                    <!-- Right Side: StackPanel for search and DataGrid -->
+                    <StackPanel Grid.Column="1" Margin="10">
+                        <!-- Search Section (above the DataGrid) -->
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,0,0,10">
+                            <TextBlock Text="Search by name:" FontSize="16" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                            <TextBox Name="MilkTeaSearchTextBox" Width="200" FontSize="16" Margin="0,0,10,0"/>
+                            <Button x:Name="SearchDrinkButton" Content="Search" Width="80" FontSize="16" Background="#1ABC9C" Foreground="White"/>
+                        </StackPanel>
+
+                        <!-- DataGrid to display milk tea items -->
+                        <DataGrid Name="MilkTeaDataGrid" AutoGenerateColumns="False" Margin="10">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="ID" Width="30" Binding="{Binding DrinkId}" />
+                                <DataGridTextColumn Header="Drink Name" Width="100" Binding="{Binding DrinkName}" />
+                                <DataGridTextColumn Header="Unit Price" Width="70" Binding="{Binding UnitPrice}" />
+                                <DataGridTextColumn Header="Category ID" Width="100" Binding="{Binding CategoryId}" />
+                                <DataGridTextColumn Header="Category Name" Width="140" Binding="{Binding Category.CategoryName}" />
+                            </DataGrid.Columns>
+                        </DataGrid>
+
+                    </StackPanel>
+                </Grid>
             </TabItem>
 
+
             <!-- Tab for Order History -->
-            <TabItem Header="History">
+            <TabItem Header="history">
                 <StackPanel Margin="20">
                     <!-- Title for Order History -->
                     <TextBlock Text="Order History" FontSize="24" FontWeight="Bold" Margin="0,0,0,20"/>
@@ -113,54 +155,34 @@
                     <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
                         <!-- From Date Picker -->
                         <TextBlock Text="From:" FontSize="16" VerticalAlignment="Center"/>
-                        <DatePicker Name="FromDatePicker" FontSize="16" Margin="10,0,20,0" SelectedDateChanged="FromDatePicker_SelectedDateChanged" />
+                        <DatePicker Name="FromDatePicker" FontSize="16" Margin="10,0,20,0"/>
 
                         <!-- To Date Picker -->
                         <TextBlock Text="To:" FontSize="16" VerticalAlignment="Center"/>
-                        <DatePicker Name="ToDatePicker" FontSize="16" Margin="10,0,20,0" SelectedDateChanged="ToDatePicker_SelectedDateChanged"/>
+                        <DatePicker Name="ToDatePicker" FontSize="16" Margin="10,0,20,0"/>
 
                         <!-- Search Button -->
                         <Button Content="Search" FontSize="16" Width="100" Background="#1ABC9C" Foreground="White" Click="SearchOrdersButton_Click"/>
                     </StackPanel>
 
-                    <StackPanel Orientation="Horizontal" Margin="0,0,0,0" Background="Black" HorizontalAlignment="Center">
-                        <!-- List of Orders -->
-                        <ListView Name="OrderHistoryListView" Height="500" Width="1000" Background="Snow" Grid.Column="0" SelectionChanged="OrderHistoryListView_SelectionChanged">
-                            <ListView.ItemTemplate>
-                                <DataTemplate>
-                                    <StackPanel Orientation="Vertical">
-                                        <!-- Order ID -->
-                                        <TextBlock Text="{Binding OrderId}" FontSize="16" FontWeight="Bold" Foreground="#4B3832"/>
-                                        <!-- Order Date -->
-                                        <TextBlock Text="{Binding OrderDate, StringFormat='{}{0:MM/dd/yyyy HH:mm}'}" FontSize="14" Foreground="#4B3832"/>
-                                        <!-- Summary of Items -->
-                                        <TextBlock Text="{Binding ItemsSummary}" FontSize="14" Foreground="#4B3832"/>
-                                        <!-- Total Amount -->
-                                        <TextBlock Text="{Binding Total, StringFormat= Total: 0 VND, ConverterCulture=nl-VN}" FontSize="14" Foreground="#4B3832"/>
-                                        <Separator Margin="0,10,0,10"/>
-                                    </StackPanel>
-                                </DataTemplate>
-                            </ListView.ItemTemplate>
-                        </ListView>
-
-                        <ListView Name="OrderDetailListView" Height="500" Width="500" Margin="50,0,0,0" Background="Snow"  Grid.Column="1">
-                            <ListView.ItemTemplate>
-                                <DataTemplate>
-                                    <StackPanel Orientation="Vertical" Margin="10">
-                                        <!-- DrinkName -->
-                                        <TextBlock Text="{Binding DrinkName}" FontSize="16" FontWeight="Bold" Foreground="#4B3832"/>
-                                        <!-- Quantity -->
-                                        <TextBlock Text="{Binding Quantity, StringFormat= Quantity: 0}" FontSize="14" Foreground="#4B3832"/>
-                                        <!-- UnitPrice -->
-                                        <TextBlock Text="{Binding UnitPrice, StringFormat=Unit price: 0 VND, ConverterCulture=nl-VN}" FontSize="14" Foreground="#4B3832"/>
-                                        <!-- Discount -->
-                                        <TextBlock Text="{Binding Discount, StringFormat= Discount: 0}" FontSize="14" Foreground="#4B3832"/>
-                                        <Separator Margin="0,10,0,10"/>
-                                    </StackPanel>
-                                </DataTemplate>
-                            </ListView.ItemTemplate>
-                        </ListView>
-                    </StackPanel>
+                    <!-- List of Orders -->
+                    <ListView Name="OrderHistoryListView" Height="300">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Vertical" Margin="10">
+                                    <!-- Order ID -->
+                                    <TextBlock Text="{Binding OrderID}" FontSize="16" FontWeight="Bold" Foreground="#4B3832"/>
+                                    <!-- Order Date -->
+                                    <TextBlock Text="{Binding OrderDate, StringFormat='{}{0:MM/dd/yyyy HH:mm}'}" FontSize="14" Foreground="#4B3832"/>
+                                    <!-- Summary of Items -->
+                                    <TextBlock Text="{Binding ItemsSummary}" FontSize="14" Foreground="#4B3832"/>
+                                    <!-- Total Amount -->
+                                    <TextBlock Text="{Binding TotalAmount, StringFormat='Total: {0:C}'}" FontSize="14" Foreground="#4B3832"/>
+                                    <Separator Margin="0,10,0,10"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
                 </StackPanel>
             </TabItem>
 

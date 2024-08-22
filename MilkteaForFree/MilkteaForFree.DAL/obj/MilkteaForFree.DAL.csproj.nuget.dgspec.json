@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Project\\New folder\\prn212-milktea\\MilkteaForFree\\MilkteaForFree.DAL\\MilkteaForFree.DAL.csproj": {}
+    "D:\\FPT\\SU24\\3W_PRN212\\Project_004\\prn212-milktea\\MilkteaForFree\\MilkteaForFree.DAL\\MilkteaForFree.DAL.csproj": {}
   },
   "projects": {
-    "C:\\Project\\New folder\\prn212-milktea\\MilkteaForFree\\MilkteaForFree.DAL\\MilkteaForFree.DAL.csproj": {
+    "D:\\FPT\\SU24\\3W_PRN212\\Project_004\\prn212-milktea\\MilkteaForFree\\MilkteaForFree.DAL\\MilkteaForFree.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Project\\New folder\\prn212-milktea\\MilkteaForFree\\MilkteaForFree.DAL\\MilkteaForFree.DAL.csproj",
+        "projectUniqueName": "D:\\FPT\\SU24\\3W_PRN212\\Project_004\\prn212-milktea\\MilkteaForFree\\MilkteaForFree.DAL\\MilkteaForFree.DAL.csproj",
         "projectName": "MilkteaForFree.DAL",
-        "projectPath": "C:\\Project\\New folder\\prn212-milktea\\MilkteaForFree\\MilkteaForFree.DAL\\MilkteaForFree.DAL.csproj",
-        "packagesPath": "C:\\Users\\nhatt\\.nuget\\packages\\",
-        "outputPath": "C:\\Project\\New folder\\prn212-milktea\\MilkteaForFree\\MilkteaForFree.DAL\\obj\\",
+        "projectPath": "D:\\FPT\\SU24\\3W_PRN212\\Project_004\\prn212-milktea\\MilkteaForFree\\MilkteaForFree.DAL\\MilkteaForFree.DAL.csproj",
+        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+        "outputPath": "D:\\FPT\\SU24\\3W_PRN212\\Project_004\\prn212-milktea\\MilkteaForFree\\MilkteaForFree.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\nhatt\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -90,7 +90,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.304/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

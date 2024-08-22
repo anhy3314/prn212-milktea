@@ -10,22 +10,29 @@ namespace MilkteaForFree.BLL.Services
 {
     public class DrinkService
     {
-        private readonly DrinkRepository _drinkRepository;
-
-        public DrinkService()
-        {
-            _drinkRepository = new DrinkRepository();
-        }
+        private DrinkRepository _repo = new();
 
         public List<Drink> GetAllDrinks()
         {
-            return _drinkRepository.GetAllDrinks();
+            return _repo.GetAllDrinks();
         }
+
+        public List<Drink> GetAllDrinksWithCategories()
+        {
+            return _repo.GetAllDrinksWithCategories();
+        }
+
+        public Drink GetById(int id) => _repo.GetById(id);
 
         public void AddDrink(Drink newDrink)
         {
-            _drinkRepository.AddDrink(newDrink);
+            _repo.AddDrink(newDrink);
         }
+
+        public void UpdateDrink(Drink drink) => _repo.UpdateDrink(drink);
+        public void DeleteDrink(Drink drink) => _repo.DeleteDrink(drink);
+        public List<Drink> SearchDrinkByName(string search) => _repo.SearchDrinkByName(search);
+        public int CountDrink() => _repo.CountDrink();
     }
 
 }

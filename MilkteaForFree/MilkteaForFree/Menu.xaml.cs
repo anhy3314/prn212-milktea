@@ -1,7 +1,20 @@
-﻿using System.Collections.ObjectModel;
+﻿using MilkteaForFree.BLL.Services;
+using MilkteaForFree.DAL.Entities;
+using MilkteaForFree.DAL.Repositories;
+using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using MilkteaForFree.BLL.Response;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
 using static MilkteaForFree.Menu;
 
 namespace MilkteaForFree
@@ -11,281 +24,398 @@ namespace MilkteaForFree
     /// </summary>
     public partial class Menu : Window
     {
+        private DrinkService drinkService = new();
+        private CategoryService categoryService = new();
+        private OrderService orderService = new();
+        private OrderDetailService detailService = new();
+        private int tempOrderId = new();
+        private bool payFlag = false;
+        public Drink EditedDrinks { get; set; }
+        public User Account { get; set; }
         public ObservableCollection<Drink> Drinks { get; set; }
         public ObservableCollection<Order> OrderHistory { get; set; }
         public ObservableCollection<OrderDetail> OrderDetails { get; set; } = new ObservableCollection<OrderDetail>();
-
-        private List<MilkteaForFree.DAL.Entities.Order> orders;
 
         public Menu()
         {
             InitializeComponent();
             DataContext = this;
 
-            InitializeOrderHistory();
-
             Drinks = new ObservableCollection<Drink>();
             OrderHistory = new ObservableCollection<Order>();
-
-            //Set default value for date picker
-            FromDatePicker.SelectedDate = DateTime.Now;
-            ToDatePicker.SelectedDate = DateTime.Now;
-            FromDatePicker.DisplayDateEnd = ToDatePicker.DisplayDate;
-            ToDatePicker.DisplayDateEnd = DateTime.Now;
-
-            //LoadDummyData();
+            OrderDetails = new ObservableCollection<OrderDetail>();
         }
 
-        private void LoadDummyData()
+        public void FillDrinkDataGrid()
         {
-            // Populate Drinks and OrderHistory collections with dummy data
-            Drinks.Add(new Drink { DrinkId = 1, CategoryID = 1, Name = "Classic Milk Tea", UnitPrice = 35000m, DrinkStatus = 1 });
-            Drinks.Add(new Drink { DrinkId = 2, CategoryID = 1, Name = "Thai Milk Tea", UnitPrice = 40000m, DrinkStatus = 1 });
-            Drinks.Add(new Drink { DrinkId = 3, CategoryID = 2, Name = "Matcha Latte", UnitPrice = 45000m, DrinkStatus = 1 });
-            Drinks.Add(new Drink { DrinkId = 4, CategoryID = 2, Name = "Taro Milk Tea", UnitPrice = 42000m, DrinkStatus = 1 });
-            Drinks.Add(new Drink { DrinkId = 5, CategoryID = 3, Name = "Oolong Tea", UnitPrice = 30000m, DrinkStatus = 1 });
-            Drinks.Add(new Drink { DrinkId = 6, CategoryID = 3, Name = "Jasmine Tea", UnitPrice = 32000m, DrinkStatus = 1 });
-            Drinks.Add(new Drink { DrinkId = 7, CategoryID = 4, Name = "Coffee Milk Tea", UnitPrice = 38000m, DrinkStatus = 1 });
-            Drinks.Add(new Drink { DrinkId = 8, CategoryID = 4, Name = "Black Sugar Milk Tea", UnitPrice = 40000m, DrinkStatus = 1 });
-
-            //OrderHistory.Add(new Order
-            //{
-            //    OrderID = 1,
-            //    UserID = 2,
-            //    OrderDate = new DateTime(2024, 8, 1, 10, 30, 0),
-            //    Total = 110000m,
-            //    OrderStatus = "Payed",
-            //    OrderDetails = new ObservableCollection<OrderDetail>
-            //    {
-            //        new OrderDetail { OrderDetailID = 1, OrderID = 1, DrinkID = 1, UnitPrice = 35000m, Quantity = 2, Discount = 0 },
-            //        new OrderDetail { OrderDetailID = 2, OrderID = 1, DrinkID = 2, UnitPrice = 40000m, Quantity = 1, Discount = 0 }
-            //    }
-            //});
-            // Add other orders similarly
-        }
-
-        public class Drink
-        {
-            public int DrinkId { get; set; }
-            public int CategoryID { get; set; }
-            public string Name { get; set; }
-            public decimal UnitPrice { get; set; }
-            public int DrinkStatus { get; set; }
-        }
-
-        public class Order
-        {
-            public int OrderID { get; set; }
-            public int UserID { get; set; }
-            public DateTime OrderDate { get; set; }
-            public decimal? Total { get; set; }
-            public string OrderStatus { get; set; }
-            public ObservableCollection<OrderDetail> OrderDetails { get; set; }
-        }
-
-        public class OrderDetail
-        {
-            public int OrderDetailID { get; set; }
-            public int OrderID { get; set; }
-            public int DrinkID { get; set; }
-            public decimal UnitPrice { get; set; }
-            public int Quantity { get; set; }
-            public decimal Discount { get; set; }
-            public decimal CalculateTotalPrice()
+            try
             {
-                return UnitPrice * Quantity * (1 - Discount);
+                // Fetch the drink menu from the service
+                var drinkMenu = drinkService.GetAllDrinks();
+
+                // Check if the retrieved data is null
+                if (drinkMenu == null)
+                {
+                    throw new Exception("The drink menu returned null.");
+                }
+
+                // Update the ListView's item source
+                TeaListView.ItemsSource = null; // Clear the previous binding
+                TeaListView.ItemsSource = drinkMenu; // Set the new data source
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred while loading the drink menu: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+
+        }
+
+        public void FillCartDataGrid()
+        {
+            try
+            {
+                // Fetch the drink menu from the service
+                var cartMenu = detailService.GetAllOfAOrder(tempOrderId);
+
+                // Check if the retrieved data is null
+                if (cartMenu == null)
+                {
+                    throw new Exception("Cart is empty, are you want to put some drinks!");
+                }
+
+                CartListView.ItemsSource = null;
+                CartListView.ItemsSource = cartMenu; // Set the new data source
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred while loading the drink menu: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+
+
 
         private void AddMilkTeaButton_Click(object sender, RoutedEventArgs e)
         {
-            string name = MilkTeaNameTextBox.Text;
-            if (decimal.TryParse(MilkTeaPriceTextBox.Text, out decimal price))
-            {
-                string selectedType = (MilkTeaTypeComboBox.SelectedItem as ComboBoxItem)?.Content.ToString();
+            //string name = MilkTeaNameTextBox.Text;
+            //if (decimal.TryParse(MilkTeaPriceTextBox.Text, out decimal price))
+            //{
+            //    string selectedType = (MilkTeaTypeComboBox.SelectedItem as ComboBoxItem)?.Content.ToString();
 
-                // Add the new milk tea to the list (implement logic to save this data as needed)
-                Drinks.Add(new Drink
-                {
-                    DrinkId = Drinks.Count + 1, // Example ID assignment
-                    CategoryID = 1, // Example category ID
-                    Name = name,
-                    UnitPrice = price,
-                    DrinkStatus = 1 // Example status
-                });
+            //    // Add the new milk tea to the list (implement logic to save this data as needed)
+            //    Drinks.Add(new Drink
+            //    {
+            //        DrinkId = Drinks.Count + 1, // Example ID assignment
+            //        CategoryID = 1, // Example category ID
+            //        Name = name,
+            //        UnitPrice = price,
+            //        DrinkStatus = 1 // Example status
+            //    });
 
-                MessageBox.Show("Milk Tea added successfully!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
-                MilkTeaNameTextBox.Clear();
-                MilkTeaPriceTextBox.Clear();
-                MilkTeaTypeComboBox.SelectedIndex = -1;
-            }
-            else
-            {
-                MessageBox.Show("Invalid price entered.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
+            //    MessageBox.Show("Milk Tea added successfully!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+            //    MilkTeaNameTextBox.Clear();
+            //    MilkTeaPriceTextBox.Clear();
+            //    MilkTeaTypeComboBox.SelectedIndex = -1;
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Invalid price entered.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            //}
         }
 
         private void AddToCart_Click(object sender, RoutedEventArgs e)
         {
-            // Retrieve the button that was clicked
-            Button button = sender as Button;
-            if (button == null)
-                return;
-
-            // Retrieve the item data (assuming it's bound to the button's DataContext)
-            var item = button.DataContext as Drink;
-            if (item == null)
-                return;
-
-            // Add item to cart
-            var existingOrderDetail = OrderDetails.OfType<OrderDetail>()
-                .FirstOrDefault(od => od.DrinkID == item.DrinkId);
-
-            if (existingOrderDetail != null)
+            try
             {
-                // If item already exists in the cart, increase the quantity
-                existingOrderDetail.Quantity++;
-            }
-            else
-            {
-                // Otherwise, create a new OrderDetail and add it to the cart
-                var newOrderDetail = new OrderDetail
+                if (payFlag == false)
                 {
-                    OrderDetailID = OrderDetails.Count + 1, // Example ID assignment
-                    OrderID = 1, // Example OrderID
-                    DrinkID = item.DrinkId,
-                    UnitPrice = item.UnitPrice,
-                    Quantity = 1,
-                    Discount = 0 // Example discount
-                };
+                    MessageBox.Show("Please create a bill before add to cart", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
+                // Retrieve the button that was clicked
+                Button button = sender as Button;
+                if (button == null)
+                    throw new InvalidOperationException("Button was null");
 
-                OrderDetails.Add(newOrderDetail);
+                // retrieve the item data (assuming it's bound to the button's DataContext)
+                var item = button.DataContext as Drink;
+                if (item == null)
+                    throw new InvalidOperationException("Drink item is null");
+
+                // Add item to cart
+                var existingOrderDetail = detailService.CheckDetailOfCurrOrderByDrinkId(tempOrderId, item.DrinkId);
+
+                if (existingOrderDetail != null)
+                {
+                    existingOrderDetail.Quantity++;
+                    detailService.UpdateOrderDetails(existingOrderDetail);
+                }
+                else
+                {
+                    int tmpId = detailService.CountDetailId() + 1;
+                    while (detailService.GetOrder(tmpId) != null)
+                    {
+                        tmpId++;
+                    }
+
+                    // Otherwise, create a new OrderDetail and add it to the cart
+                    OrderDetail x = new OrderDetail
+                    {
+                        OrderDetailId = tmpId,
+                        OrderId = tempOrderId,
+                        DrinkId = item.DrinkId,
+                        UnitPrice = item.UnitPrice,
+                        Quantity = 1,
+                        Discount = 0
+                    };
+
+                    detailService.AddOrderDetails(x);
+                }
+
+                // Update the total price
+                UpdateTotal();
+                FillCartDataGrid();
             }
-
-            // Update the total price
-            UpdateTotal();
+            catch (Exception ex)
+            {
+                // Check if there is an inner exception
+                var baseException = ex.GetBaseException();
+                MessageBox.Show($"Error adding to cart: {baseException.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void UpdateTotal()
         {
-            decimal total = OrderDetails.Sum(od => od.CalculateTotalPrice());
+            decimal total = detailService.GetPrice(tempOrderId);
             TotalTextBlock.Text = total.ToString("C");
         }
 
         private void Checkout_Click(object sender, RoutedEventArgs e)
         {
             // For demonstration purposes, show a message box with a summary of the order
-            decimal total = OrderDetails.Sum(od => od.CalculateTotalPrice());
-            MessageBox.Show($"Proceeding to checkout. Total amount: {total:C}", "Checkout", MessageBoxButton.OK, MessageBoxImage.Information);
+            decimal total = detailService.GetPrice(tempOrderId);
+            MessageBoxResult answer = MessageBox.Show($"Proceeding to checkout. Total amount: {total:C}", "Confirm?", MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+            if (answer == MessageBoxResult.Yes)
+            {
+                payFlag = false;
+                CreateBillButton.IsEnabled = true;
+                orderService.UpdateTotalPrice(tempOrderId, total);
+                tempOrderId = orderService.CountOrderID() + 1;
+                FillDataGrid();
+            }
 
             // Here you would typically handle the checkout logic, such as saving the order to the database or processing the payment
         }
 
         private void SearchOrdersButton_Click(object sender, RoutedEventArgs e)
         {
-            var fromDate = FromDatePicker.SelectedDate;
-            var toDate = ToDatePicker.SelectedDate;
+            //var fromDate = FromDatePicker.SelectedDate;
+            //var toDate = ToDatePicker.SelectedDate;
 
-            OrderDetailListView.SelectedIndex = 0;
-            OrderDetailListView.ItemsSource = null;
+            //if (fromDate == null || toDate == null)
+            //{
+            //    MessageBox.Show("Please select both start and end dates.", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
+            //    return;
+            //}
 
-            if (fromDate == null || toDate == null)
-            {
-                MessageBox.Show("Please select both start and end dates.", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
-                return;
-            }
+            //// Ensure the end date is not earlier than the start date
+            //if (toDate < fromDate)
+            //{
+            //    MessageBox.Show("End date cannot be earlier than start date.", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
+            //    return;
+            //}
 
-            // Ensure the end date is not earlier than the start date
-            if (toDate < fromDate)
-            {
-                MessageBox.Show("End date cannot be earlier than start date.", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
-                return;
-            }
+            //// Filter orders by the selected date range
+            //var filteredOrders = OrderHistory.Where(o => o.OrderDate >= fromDate && o.OrderDate <= toDate).ToList();
 
-            // Filter orders by the selected date range
-            var filteredOrders = orders.Where(o => o.OrderDate >= fromDate && o.OrderDate <= toDate).ToList();
-
-            // Update the ListView to display the filtered orders
-            OrderHistoryListView.ItemsSource = filteredOrders;
+            //// Update the ListView to display the filtered orders
+            //OrderHistoryListView.ItemsSource = filteredOrders;
         }
 
-        private void InitializeOrderHistory()
+        private void OrderTab_Loaded(object sender, RoutedEventArgs e)
         {
-            OrderService orderService = new OrderService();
-            orders = orderService.GetList().ToList();
-            //MessageBox.Show("" + orders.Count, "Success", MessageBoxButton.OK, MessageBoxImage.Information);
-            for (int i = 0; i < orders.Count; i++)
+            CancelButton.IsEnabled = false;
+            FillDataGrid();
+        }
+
+        private void CreateBillButton_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("A Bill is ready!", "Notify", MessageBoxButton.OK, MessageBoxImage.Information);
+
+            payFlag = true;
+            CreateBillButton.IsEnabled = false;
+            CancelButton.IsEnabled = true;
+
+            tempOrderId = orderService.CountOrderID() + 1;
+            int orderId = tempOrderId;
+            int userId = Account.UserId;
+            DateTime orderDate = DateTime.Now;
+            decimal? total = 0;
+            string? status = "1";
+
+
+            Order x = new();
+            x.OrderId = tempOrderId;
+            x.UserId = userId;
+            x.OrderDate = orderDate;
+            x.Total = total;
+            x.OrderStatus = status;
+
+            orderService.AddOrder(x);
+        }
+
+        private void CancelButton_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult answer = MessageBox.Show("Do you really want to cancel?", "Confirm?", MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+            if (answer == MessageBoxResult.Yes)
             {
-                MilkteaForFree.DAL.Entities.Order item = orders[i];
-                Order order = new Order
+                payFlag = false;
+                CreateBillButton.IsEnabled = true;
+
+                var deletedOrder = orderService.GetOrderById(tempOrderId);
+                if (deletedOrder != null)
                 {
-                    OrderID = item.OrderId,
-                    OrderDate = item.OrderDate,
-                    Total = item.Total,
-                    UserID = 2,
-                };
-                //OrderHistory.Add(order);
-                
+                    orderService.DeleteOrder(deletedOrder);
+                }
+
+                var deletedOrderDetail = detailService.GetAllOfAOrder(tempOrderId);
+                if (deletedOrderDetail != null)
+                {
+                    detailService.DeleteAllOrderDetailsOfCurrOrder(tempOrderId);
+                }
             }
-            OrderHistoryListView.ItemsSource = orders;
+
+            FillDataGrid();
         }
 
-        private void FromDatePicker_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
+        public void FillDataGrid()
         {
-            ToDatePicker.DisplayDateStart = FromDatePicker.SelectedDate;
+            FillDrinkDataGrid();
+            FillCartDataGrid();
         }
 
-        private void ToDatePicker_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
+        private void DeleteFromCartButton_Click(object sender, RoutedEventArgs e)
         {
-            FromDatePicker.DisplayDateEnd = ToDatePicker.SelectedDate;
-        }
-
-        public class OrderDetailView()
-        {
-            public string DrinkName { get; set; }
-            public double Discount { get; set; }
-            public decimal? UnitPrice { get; set; }
-            public int Quantity { get; set; }
-        }
-
-        private void OrderHistoryListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            MilkteaForFree.DAL.Entities.Order item = (MilkteaForFree.DAL.Entities.Order) OrderHistoryListView.SelectedItem;
-            //MessageBox.Show("" + item.OrderId, "Success", MessageBoxButton.OK, MessageBoxImage.Information);
-            List<OrderDetailView> listOrderDetailViews = new List<OrderDetailView>();
-
-            OrderService orderService = new OrderService();
             try
             {
-                if (OrderHistoryListView.SelectedItem == null)
-                {
-                    OrderDetailListView.SelectedIndex = 0;
-                    OrderDetailListView.Items.Clear();
-                    return;
-                }
+                // Retrieve the button that was clicked
+                Button? button = sender as Button;
+                if (button == null)
+                    throw new InvalidOperationException("Button was null");
 
+                // retrieve the item data (assuming it's bound to the button's DataContext)
+                var item = button.DataContext as OrderDetail;
+                if (item == null)
+                    throw new InvalidOperationException("OrderDetail item is null");
 
-                List<OrderDetailResponse> listItems = orderService.GetOrderDetailsByOrderId(item.OrderId).ToList();
+                // Delete item to cart
+                OrderDetail x = new();
+                x.OrderDetailId = item.OrderDetailId;
+                x.OrderId = item.OrderId;
+                x.DrinkId = item.DrinkId;
+                x.UnitPrice = item.UnitPrice;
+                x.Quantity = item.Quantity;
+                x.Discount = item.Discount;
+                //x = item;
 
-                foreach (OrderDetailResponse od in listItems)
-                {
-                    listOrderDetailViews.Add(new OrderDetailView
-                    {
-                        DrinkName = od.Drink.DrinkName,
-                        Discount = od.Discount,
-                        Quantity = od.Quantity,
-                        UnitPrice = od.UnitPrice
-                    });
-                }
+                detailService.DeleteOrderDetails(x);
+
+                // Update the total price
+                UpdateTotal();
+                FillCartDataGrid();
             }
             catch (Exception ex)
             {
+                // Check if there is an inner exception
+                var baseException = ex.GetBaseException();
+                MessageBox.Show($"Error adding to cart: {baseException.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        public void CountId()
+        {
+            tempOrderId = orderService.CountOrderID() + 1;
+        }
+
+        public void FillDrinkManagementDataGrid()
+        {
+            MilkTeaDataGrid.ItemsSource = null;
+            MilkTeaDataGrid.ItemsSource = drinkService.GetAllDrinksWithCategories();
+        }
+
+        public void FillCategoryCombobox()
+        {
+            MilkTeaTypeComboBox.ItemsSource = null;
+            MilkTeaTypeComboBox.ItemsSource = categoryService.GetAllCategories();
+            MilkTeaTypeComboBox.DisplayMemberPath = "CategoryName";
+            MilkTeaTypeComboBox.SelectedValuePath = "CategoryId";
+        }
+
+        private void DrinkManagementTab_Loaded(object sender, RoutedEventArgs e)
+        {
+            FillAllInDrinkManagement();
+        }
+
+        public void FillAllInDrinkManagement()
+        {
+            FillDrinkManagementDataGrid();
+            FillCategoryCombobox();
+            //FillElemetInDrinkManage();
+        }
+
+        private void AddDrinkButton_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult answer = MessageBox.Show("Do you really want to add new drink?", "Confirm?", MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+            if (answer == MessageBoxResult.Yes)
+            {
+
+                int tmpId = drinkService.CountDrink() + 1;
+                while (drinkService.GetById(tmpId) != null)
+                {
+                    tmpId++;
+                }
+                Drink x = new();
+                x.DrinkId = tmpId;
+                x.DrinkName = MilkTeaNameTextBox.Text;
+                x.UnitPrice = decimal.Parse(MilkTeaPriceTextBox.Text);
+                x.CategoryId = (int)MilkTeaTypeComboBox.SelectedValue;
+                x.DrinkStatus = 1;
+
+                drinkService.AddDrink(x);
+            }
+
+            FillDrinkManagementDataGrid();
+        }
+
+        public void FillElemetInDrinkManage()
+        {
+            Drink? selected = MilkTeaDataGrid.SelectedItem as Drink;
+            MilkTeaNameTextBox.Text = selected.DrinkName;
+            MilkTeaPriceTextBox.Text = selected.UnitPrice.ToString();
+            MilkTeaTypeComboBox.SelectedValue = selected.CategoryId;
+        }
+
+        private void UpdateDrinkButton_Click(object sender, RoutedEventArgs e)
+        {
+            Drink? selected = MilkTeaDataGrid.SelectedItem as Drink;
+            if (selected == null)
+            {
+                MessageBox.Show("Please select a row (air con) before editing", "Select?", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
-            
+            MessageBox.Show("You Select: " + selected.ToString());
 
-            
-            OrderDetailListView.ItemsSource = listOrderDetailViews;
+            Drink x = new();
+            x.DrinkId = selected.DrinkId;
+            x.DrinkName = MilkTeaNameTextBox.Text;
+            x.UnitPrice = decimal.Parse(MilkTeaPriceTextBox.Text);
+            x.CategoryId = (int)MilkTeaTypeComboBox.SelectedValue;
+            x.DrinkStatus = 1;
+
+            drinkService.UpdateDrink(x);
+            FillDrinkManagementDataGrid();
         }
     }
 }

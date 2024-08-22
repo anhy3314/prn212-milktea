@@ -10,7 +10,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MilkteaForFree.BLL\MilkteaForFree.BLL.csproj" />
-    <ProjectReference Include="..\MilkteaForFree.DAL\MilkteaForFree.DAL.csproj" />
   </ItemGroup>
 
   <ItemGroup>
