@@ -1,0 +1,188 @@
+﻿<Window x:Class="MilkteaForFree.Menu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MilkteaForFree"
+        mc:Ignorable="d"
+        Title="Bubble Tea" Height="450" Width="800"
+        WindowState="Maximized"        
+>
+    <Grid>
+        <TabControl>
+            <!-- Tab for Ordering -->
+            <TabItem Header="Order">
+                <StackPanel Orientation="Vertical" Margin="20">
+                    <!-- Title and Welcome Message -->
+                    <TextBlock Text="Bubble Tea Shop" FontSize="36" FontWeight="Bold" Foreground="#F67280" HorizontalAlignment="Center"/>
+                    <TextBlock Text="Welcome to the best bubble tea in town!" FontSize="18" Foreground="#4B3832" HorizontalAlignment="Center"/>
+
+                    <!-- List of Teas and Cart -->
+                    <Grid Margin="20,20,20,20">
+                        <Grid.ColumnDefinitions>
+                            <!-- Column for Tea List -->
+                            <ColumnDefinition Width="2*"/>
+                            <!-- Column for Cart -->
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <!-- List of Teas -->
+                        <ListView Name="TeaListView" Grid.Column="0" Margin="0,20,10,20">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal" Margin="10">
+                                        <!-- Tea Name -->
+                                        <TextBlock Text="{Binding Name}" FontSize="18" FontWeight="Bold" Foreground="#4B3832" VerticalAlignment="Center"/>
+                                        <!-- Tea Price -->
+                                        <TextBlock Text="{Binding Price, StringFormat='{}{0:C}'}" FontSize="16" Foreground="#4B3832" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                                        <!-- Buttons for Tea Actions -->
+                                        <Button Content="Add to Cart" Width="100" Margin="20,0,0,0" Background="#1ABC9C" Foreground="White" Click="AddToCart_Click"/>
+                                        <Button Content="Delete From Cart" Width="100" Margin="20,0,0,0" Background="#1ABC9C" Foreground="White" Click="AddToCart_Click"/>
+                                        <Button Content="Delete From Menu" Width="100" Margin="20,0,0,0" Background="#1ABC9C" Foreground="White" Click="AddToCart_Click"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+
+                        <!-- Cart and Checkout -->
+                        <StackPanel Grid.Column="1" Background="#FFDAB9">
+                            <!-- Cart Title -->
+                            <TextBlock Text="Your Cart" FontSize="24" FontWeight="Bold" Foreground="#4B3832" Margin="0,0,0,10"/>
+                            <!-- Cart Items List -->
+                            <ListView Name="CartListView" Height="300">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Horizontal" Margin="10">
+                                            <!-- Cart Item Name -->
+                                            <TextBlock Text="{Binding Name}" FontSize="18" Foreground="#4B3832"/>
+                                            <!-- Quantity of Cart Item -->
+                                            <TextBlock Text="x" FontSize="18" Foreground="#4B3832" Margin="10,0,0,0"/>
+                                            <TextBlock Text="{Binding Quantity}" FontSize="18" Foreground="#4B3832" Margin="10,0,0,0"/>
+                                            <!-- Total Price for Cart Item -->
+                                            <TextBlock Text="{Binding TotalPrice, StringFormat='{}{0:C}'}" FontSize="18" Foreground="#4B3832" Margin="10,0,0,0"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                            <!-- Total Price -->
+                            <TextBlock Text="Total:" FontSize="18" FontWeight="Bold" Foreground="#4B3832" Margin="10,20,0,0"/>
+                            <TextBlock Name="TotalTextBlock" Text="0.00" FontSize="18" Foreground="#4B3832" Margin="10,5,0,0"/>
+                            <!-- Checkout Button -->
+                            <Button Content="Proceed to Checkout" Width="200" Margin="20,20,0,0" Background="#F67280" Foreground="White" HorizontalAlignment="Center" Click="Checkout_Click"/>
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>
+            </TabItem>
+
+            <!-- Tab for Adding New Milk Tea -->
+            <TabItem Header="Add booba">
+                <StackPanel Margin="20">
+                    <!-- Title for Adding Milk Tea -->
+                    <TextBlock Text="Add New Milk Tea" FontSize="24" FontWeight="Bold" Margin="0,0,0,20"/>
+
+                    <!-- Milk Tea Name -->
+                    <TextBlock Text="Name:" FontSize="16"/>
+                    <TextBox Name="MilkTeaNameTextBox" FontSize="16" Margin="0,0,0,10"/>
+
+                    <!-- Milk Tea Price -->
+                    <TextBlock Text="Price:" FontSize="16"/>
+                    <TextBox Name="MilkTeaPriceTextBox" FontSize="16" Margin="0,0,0,10"/>
+
+                    <!-- Milk Tea Type Selection -->
+                    <TextBlock Text="Milk Tea Type:" FontSize="16"/>
+                    <ComboBox Name="MilkTeaTypeComboBox" FontSize="16" Margin="0,0,0,10">
+                        <ComboBoxItem Content="Classic"/>
+                        <ComboBoxItem Content="Fruit Tea"/>
+                        <ComboBoxItem Content="Matcha"/>
+                        <ComboBoxItem Content="Taro"/>
+                        <!-- Add more milk tea types as needed -->
+                    </ComboBox>
+
+                    <!-- Add Milk Tea Button -->
+                    <Button Content="Add Milk Tea" FontSize="16" Width="150" Background="#1ABC9C" Foreground="White" Click="AddMilkTeaButton_Click" Margin="0,20,0,0"/>
+                </StackPanel>
+            </TabItem>
+
+            <!-- Tab for Order History -->
+            <TabItem Header="History">
+                <StackPanel Margin="20">
+                    <!-- Title for Order History -->
+                    <TextBlock Text="Order History" FontSize="24" FontWeight="Bold" Margin="0,0,0,20"/>
+
+                    <!-- Search Section for Orders -->
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                        <!-- From Date Picker -->
+                        <TextBlock Text="From:" FontSize="16" VerticalAlignment="Center"/>
+                        <DatePicker Name="FromDatePicker" FontSize="16" Margin="10,0,20,0" SelectedDateChanged="FromDatePicker_SelectedDateChanged" />
+
+                        <!-- To Date Picker -->
+                        <TextBlock Text="To:" FontSize="16" VerticalAlignment="Center"/>
+                        <DatePicker Name="ToDatePicker" FontSize="16" Margin="10,0,20,0" SelectedDateChanged="ToDatePicker_SelectedDateChanged"/>
+
+                        <!-- Search Button -->
+                        <Button Content="Search" FontSize="16" Width="100" Background="#1ABC9C" Foreground="White" Click="SearchOrdersButton_Click"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,0" Background="Black" HorizontalAlignment="Center">
+                        <!-- List of Orders -->
+                        <ListView Name="OrderHistoryListView" Height="500" Width="1000" Background="Snow" Grid.Column="0" SelectionChanged="OrderHistoryListView_SelectionChanged">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Vertical">
+                                        <!-- Order ID -->
+                                        <TextBlock Text="{Binding OrderId}" FontSize="16" FontWeight="Bold" Foreground="#4B3832"/>
+                                        <!-- Order Date -->
+                                        <TextBlock Text="{Binding OrderDate, StringFormat='{}{0:MM/dd/yyyy HH:mm}'}" FontSize="14" Foreground="#4B3832"/>
+                                        <!-- Summary of Items -->
+                                        <TextBlock Text="{Binding ItemsSummary}" FontSize="14" Foreground="#4B3832"/>
+                                        <!-- Total Amount -->
+                                        <TextBlock Text="{Binding Total, StringFormat= Total: 0 VND, ConverterCulture=nl-VN}" FontSize="14" Foreground="#4B3832"/>
+                                        <Separator Margin="0,10,0,10"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+
+                        <ListView Name="OrderDetailListView" Height="500" Width="500" Margin="50,0,0,0" Background="Snow"  Grid.Column="1">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Vertical" Margin="10">
+                                        <!-- DrinkName -->
+                                        <TextBlock Text="{Binding DrinkName}" FontSize="16" FontWeight="Bold" Foreground="#4B3832"/>
+                                        <!-- Quantity -->
+                                        <TextBlock Text="{Binding Quantity, StringFormat= Quantity: 0}" FontSize="14" Foreground="#4B3832"/>
+                                        <!-- UnitPrice -->
+                                        <TextBlock Text="{Binding UnitPrice, StringFormat=Unit price: 0 VND, ConverterCulture=nl-VN}" FontSize="14" Foreground="#4B3832"/>
+                                        <!-- Discount -->
+                                        <TextBlock Text="{Binding Discount, StringFormat= Discount: 0}" FontSize="14" Foreground="#4B3832"/>
+                                        <Separator Margin="0,10,0,10"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </StackPanel>
+                </StackPanel>
+            </TabItem>
+
+            <!-- Tab for Employee Profile -->
+            <TabItem Header="Employee">
+                <StackPanel Margin="20">
+                    <!-- Title for User Profile -->
+                    <TextBlock Text="User Profile" FontSize="24" FontWeight="Bold" Margin="0,0,0,20"/>
+
+                    <!-- Username -->
+                    <TextBlock Text="Username:" FontSize="16"/>
+                    <TextBlock Name="UsernameTextBlock" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+
+                    <!-- Phone -->
+                    <TextBlock Text="Phone:" FontSize="16"/>
+                    <TextBlock Name="Phone" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+
+                    <!-- Role -->
+                    <TextBlock Text="Role:" FontSize="16"/>
+                    <TextBlock Name="RoleTextBlock" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

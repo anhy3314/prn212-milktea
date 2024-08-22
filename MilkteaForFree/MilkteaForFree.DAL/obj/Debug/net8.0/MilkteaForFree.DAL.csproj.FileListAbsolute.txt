@@ -1,0 +1,43 @@
+E:\3W616\FullProject\MilkteaForFree\MilkteaForFree.DAL\bin\Debug\net8.0\MilkteaForFree.DAL.deps.json
+E:\3W616\FullProject\MilkteaForFree\MilkteaForFree.DAL\bin\Debug\net8.0\MilkteaForFree.DAL.runtimeconfig.json
+E:\3W616\FullProject\MilkteaForFree\MilkteaForFree.DAL\bin\Debug\net8.0\MilkteaForFree.DAL.dll
+E:\3W616\FullProject\MilkteaForFree\MilkteaForFree.DAL\bin\Debug\net8.0\MilkteaForFree.DAL.pdb
+E:\3W616\FullProject\MilkteaForFree\MilkteaForFree.DAL\obj\Debug\net8.0\MilkteaForFree.DAL.csproj.AssemblyReference.cache
+E:\3W616\FullProject\MilkteaForFree\MilkteaForFree.DAL\obj\Debug\net8.0\MilkteaForFree.DAL.GeneratedMSBuildEditorConfig.editorconfig
+E:\3W616\FullProject\MilkteaForFree\MilkteaForFree.DAL\obj\Debug\net8.0\MilkteaForFree.DAL.AssemblyInfoInputs.cache
+E:\3W616\FullProject\MilkteaForFree\MilkteaForFree.DAL\obj\Debug\net8.0\MilkteaForFree.DAL.AssemblyInfo.cs
+E:\3W616\FullProject\MilkteaForFree\MilkteaForFree.DAL\obj\Debug\net8.0\MilkteaForFree.DAL.csproj.CoreCompileInputs.cache
+E:\3W616\FullProject\MilkteaForFree\MilkteaForFree.DAL\obj\Debug\net8.0\MilkteaForFree.DAL.dll
+E:\3W616\FullProject\MilkteaForFree\MilkteaForFree.DAL\obj\Debug\net8.0\refint\MilkteaForFree.DAL.dll
+E:\3W616\FullProject\MilkteaForFree\MilkteaForFree.DAL\obj\Debug\net8.0\MilkteaForFree.DAL.pdb
+E:\3W616\FullProject\MilkteaForFree\MilkteaForFree.DAL\obj\Debug\net8.0\MilkteaForFree.DAL.genruntimeconfig.cache
+E:\3W616\FullProject\MilkteaForFree\MilkteaForFree.DAL\obj\Debug\net8.0\ref\MilkteaForFree.DAL.dll
+C:\Project\PRN212\Lag\MilkteaForFree\MilkteaForFree.DAL\bin\Debug\net8.0\MilkteaForFree.DAL.deps.json
+C:\Project\PRN212\Lag\MilkteaForFree\MilkteaForFree.DAL\bin\Debug\net8.0\MilkteaForFree.DAL.runtimeconfig.json
+C:\Project\PRN212\Lag\MilkteaForFree\MilkteaForFree.DAL\bin\Debug\net8.0\MilkteaForFree.DAL.dll
+C:\Project\PRN212\Lag\MilkteaForFree\MilkteaForFree.DAL\bin\Debug\net8.0\MilkteaForFree.DAL.pdb
+C:\Project\PRN212\Lag\MilkteaForFree\MilkteaForFree.DAL\obj\Debug\net8.0\MilkteaForFree.DAL.csproj.AssemblyReference.cache
+C:\Project\PRN212\Lag\MilkteaForFree\MilkteaForFree.DAL\obj\Debug\net8.0\MilkteaForFree.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Project\PRN212\Lag\MilkteaForFree\MilkteaForFree.DAL\obj\Debug\net8.0\MilkteaForFree.DAL.AssemblyInfoInputs.cache
+C:\Project\PRN212\Lag\MilkteaForFree\MilkteaForFree.DAL\obj\Debug\net8.0\MilkteaForFree.DAL.AssemblyInfo.cs
+C:\Project\PRN212\Lag\MilkteaForFree\MilkteaForFree.DAL\obj\Debug\net8.0\MilkteaForFree.DAL.csproj.CoreCompileInputs.cache
+C:\Project\PRN212\Lag\MilkteaForFree\MilkteaForFree.DAL\obj\Debug\net8.0\MilkteaForFree.DAL.sourcelink.json
+C:\Project\PRN212\Lag\MilkteaForFree\MilkteaForFree.DAL\obj\Debug\net8.0\MilkteaForFree.DAL.dll
+C:\Project\PRN212\Lag\MilkteaForFree\MilkteaForFree.DAL\obj\Debug\net8.0\refint\MilkteaForFree.DAL.dll
+C:\Project\PRN212\Lag\MilkteaForFree\MilkteaForFree.DAL\obj\Debug\net8.0\MilkteaForFree.DAL.pdb
+C:\Project\PRN212\Lag\MilkteaForFree\MilkteaForFree.DAL\obj\Debug\net8.0\MilkteaForFree.DAL.genruntimeconfig.cache
+C:\Project\PRN212\Lag\MilkteaForFree\MilkteaForFree.DAL\obj\Debug\net8.0\ref\MilkteaForFree.DAL.dll
+C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree.DAL\bin\Debug\net8.0\MilkteaForFree.DAL.deps.json
+C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree.DAL\bin\Debug\net8.0\MilkteaForFree.DAL.runtimeconfig.json
+C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree.DAL\bin\Debug\net8.0\MilkteaForFree.DAL.dll
+C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree.DAL\bin\Debug\net8.0\MilkteaForFree.DAL.pdb
+C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree.DAL\obj\Debug\net8.0\MilkteaForFree.DAL.csproj.AssemblyReference.cache
+C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree.DAL\obj\Debug\net8.0\MilkteaForFree.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree.DAL\obj\Debug\net8.0\MilkteaForFree.DAL.AssemblyInfoInputs.cache
+C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree.DAL\obj\Debug\net8.0\MilkteaForFree.DAL.AssemblyInfo.cs
+C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree.DAL\obj\Debug\net8.0\MilkteaForFree.DAL.csproj.CoreCompileInputs.cache
+C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree.DAL\obj\Debug\net8.0\MilkteaForFree.DAL.dll
+C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree.DAL\obj\Debug\net8.0\refint\MilkteaForFree.DAL.dll
+C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree.DAL\obj\Debug\net8.0\MilkteaForFree.DAL.pdb
+C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree.DAL\obj\Debug\net8.0\MilkteaForFree.DAL.genruntimeconfig.cache
+C:\Project\New folder\prn212-milktea\MilkteaForFree\MilkteaForFree.DAL\obj\Debug\net8.0\ref\MilkteaForFree.DAL.dll
