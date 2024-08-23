@@ -27,7 +27,7 @@
                         </Grid.ColumnDefinitions>
 
                         <!-- List of Teas -->
-                        <ListView Name="TeaListView" Grid.Column="0" Margin="0,20,10,20">
+                        <ListView Name="TeaListView" Grid.Column="0" Height="350" Margin="0,20,10,152">
                             <ListView.ItemTemplate>
                                 <DataTemplate>
                                     <StackPanel Orientation="Horizontal" Margin="10">
@@ -48,7 +48,7 @@
                             <!-- Cart Title -->
                             <TextBlock Text="Your Cart" FontSize="24" FontWeight="Bold" Foreground="#4B3832" Margin="0,0,0,10"/>
                             <!-- Cart Items List -->
-                            <ListView Name="CartListView" Height="300">
+                            <ListView Name="CartListView" Height="224">
                                 <ListView.ItemTemplate>
                                     <DataTemplate>
                                         <StackPanel Orientation="Horizontal" Margin="10">
@@ -219,7 +219,7 @@
             </TabItem>
 
             <!-- Tab for Employee Profile -->
-            <TabItem x:Name="ProfileTab" Header="My Profile" Loaded="ProfileTab_Loaded">
+            <TabItem x:Name="ProfileTab" Header="My Profile" Loaded="ProfileTab_Loaded" Height="22" VerticalAlignment="Top">
                 <StackPanel Margin="20">
                     <!-- Title for User Profile -->
                     <TextBlock Text="User Profile" FontSize="24" FontWeight="Bold" Margin="0,0,0,20"/>
@@ -235,6 +235,8 @@
                     <!-- Role -->
                     <TextBlock Text="Role:" FontSize="16"/>
                     <TextBox Name="RoleTextBox" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+                    <!-- Quit Button -->
+                    <Button x:Name="LogoutButton" Content="Logout" FontSize="16" Width="100" Background="#E74C3C" Foreground="White" HorizontalAlignment="Center" Margin="10,20,0,0" Click="LogoutButton_Click"/>
                 </StackPanel>
             </TabItem>
         </TabControl>
