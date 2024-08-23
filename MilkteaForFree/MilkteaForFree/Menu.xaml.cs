@@ -567,5 +567,16 @@ namespace MilkteaForFree
 
             FillAllInDrinkManagement();
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            if(Account.UserRole == 1)
+            {
+                DrinkManagementTab.IsEnabled = true;
+            } else
+            {
+                DrinkManagementTab.IsEnabled = false ;
+            }
+        }
     }
 }

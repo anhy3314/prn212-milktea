@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:MilkteaForFree"
         mc:Ignorable="d"
         Title="Bubble Tea" Height="450" Width="800"
-        WindowState="Maximized"        
+        WindowState="Maximized" Loaded="Window_Loaded"        
 >
     <Grid>
         <TabControl>
