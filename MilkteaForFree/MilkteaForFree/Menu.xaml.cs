@@ -582,5 +582,17 @@ namespace MilkteaForFree
                 DrinkManagementTab.IsEnabled = false ;
             }
         }
+
+        private void LogoutButton_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult answer = MessageBox.Show("Do you really want to logout?", "Confirm?", MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+            if (answer == MessageBoxResult.Yes)
+            {
+                MainWindow loginWin = new MainWindow();
+                loginWin.Show();
+                this.Close();
+            }
+        }
     }
 }

@@ -210,7 +210,7 @@
             </TabItem>
 
             <!-- Tab for Employee Profile -->
-            <TabItem x:Name="ProfileTab" Header="My Profile" Loaded="ProfileTab_Loaded">
+            <TabItem x:Name="ProfileTab" Header="My Profile" Loaded="ProfileTab_Loaded" Height="22" VerticalAlignment="Top">
                 <StackPanel Margin="20">
                     <!-- Title for User Profile -->
                     <TextBlock Text="User Profile" FontSize="24" FontWeight="Bold" Margin="0,0,0,20"/>
@@ -226,6 +226,8 @@
                     <!-- Role -->
                     <TextBlock Text="Role:" FontSize="16"/>
                     <TextBox Name="RoleTextBox" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+                    <!-- Quit Button -->
+                    <Button x:Name="LogoutButton" Content="Logout" FontSize="16" Width="100" Background="#E74C3C" Foreground="White" HorizontalAlignment="Center" Margin="10,20,0,0" Click="LogoutButton_Click"/>
                 </StackPanel>
             </TabItem>
         </TabControl>
