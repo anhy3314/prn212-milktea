@@ -398,6 +398,7 @@ namespace MilkteaForFree
             }
 
             FillDrinkManagementDataGrid();
+            FillDataGrid();
         }
 
         public void FillElemetInDrinkManage()
@@ -424,6 +425,7 @@ namespace MilkteaForFree
             EditedDrinks = selected;
 
             FillElemetInDrinkManage();
+            FillDataGrid();
         }
 
         private void InitializeOrderHistory()
@@ -545,6 +547,7 @@ namespace MilkteaForFree
 
             drinkService.UpdateDrink(x);
             FillDrinkManagementDataGrid();
+            FillDataGrid();
         }
 
 
@@ -566,6 +569,7 @@ namespace MilkteaForFree
             drinkService.DeleteDrink(selected);
 
             FillAllInDrinkManagement();
+            FillDataGrid();
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)

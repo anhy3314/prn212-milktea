@@ -27,7 +27,7 @@
                         </Grid.ColumnDefinitions>
 
                         <!-- List of Teas -->
-                        <ListView Name="TeaListView" Grid.Column="0" Margin="0,20,10,20">
+                        <ListView Name="TeaListView" Grid.Column="0" Height="350" Margin="0,20,10,152">
                             <ListView.ItemTemplate>
                                 <DataTemplate>
                                     <StackPanel Orientation="Horizontal" Margin="10">
@@ -48,7 +48,7 @@
                             <!-- Cart Title -->
                             <TextBlock Text="Your Cart" FontSize="24" FontWeight="Bold" Foreground="#4B3832" Margin="0,0,0,10"/>
                             <!-- Cart Items List -->
-                            <ListView Name="CartListView" Height="300">
+                            <ListView Name="CartListView" Height="224">
                                 <ListView.ItemTemplate>
                                     <DataTemplate>
                                         <StackPanel Orientation="Horizontal" Margin="10">
