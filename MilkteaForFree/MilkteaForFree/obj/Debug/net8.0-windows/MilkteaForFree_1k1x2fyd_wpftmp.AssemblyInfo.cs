@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MilkteaForFree")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ea6d3c23529b4f54f5d5316743d7e88a36f62584")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f34b9709a6a191b31bb77706adcd8be584a0a9de")]
 [assembly: System.Reflection.AssemblyProductAttribute("MilkteaForFree")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MilkteaForFree")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
